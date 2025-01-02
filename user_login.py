@@ -27,6 +27,6 @@ def st_user_login():
       else:
         st.error("Error, entering user name and/or password. Please contact the Administrator")
     return go_to_app
-  except:
+  except Exception as e:
     st.error(f"Error encountered in logging in {e}")
     st.stop()
