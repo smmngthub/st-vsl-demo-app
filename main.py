@@ -17,8 +17,8 @@ elif app_user == "TBT":
   st.balloons()
   
   # Build the sidebar
-  with st.sidebar:
-    pass
+  # with st.sidebar:
+  #  pass
     
   # Build the Main Navigations
 else:
