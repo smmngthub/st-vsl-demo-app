@@ -11,7 +11,7 @@ def st_user_login():
                              max_chars=25)
 
     submitted = st.button("Login")
-    
+    go_to_app = ""
     # trimmed_user_name = user_name.trim()
     # trimmed_user_pwd = user_pwd.trim() 
     # if len(user_name) > 1 and user_name = "Vessel123" and user_pwd = "Hey@123"
