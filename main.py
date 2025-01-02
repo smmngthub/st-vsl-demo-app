@@ -8,7 +8,7 @@ app_user = st_user_login()
 if app_user == "VSL":
   st.toast("Hi you are in Vessel Application")
   # Build the sidebar
-  st.sidebar.subheader("Vessels")
+  # st.sidebar.subheader("Vessels")
   st.divider()
   # Build the Main Navigations  
 elif app_user == "TBT":
