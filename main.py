@@ -13,4 +13,4 @@ if __name__ == '__main__':
   st.write(" Ret Value", app_user)
   # st.switch_page("entry_screen.py")
   # if app_user == "VSL":
-  st.switch_page(st.Page("entry_screen.py"))
+  #st.switch_page(st.Page("entry_screen.py"))
