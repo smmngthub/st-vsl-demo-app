@@ -21,12 +21,12 @@ def st_user_login():
         st.snow()
         st.success("You have successfully logged in to the system")
         go_to_app = "VSL"
-        st.switch_page("entry_screen.py")
+        # st.switch_page("entry_screen.py")
       elif user_name == "Tbt123" and user_pwd == "Tbt@123":
         st.balloon()
         st.success("You have successfully logged in to the system")
         go_to_app = "TBT"
-        st.switch_page("entry_screen.py")
+        # st.switch_page("entry_screen.py")
       else:
         st.error("Error, entering user name and/or password. Please contact the Administrator")
     return go_to_app
