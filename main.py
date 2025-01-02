@@ -7,7 +7,7 @@ st.write(" Bismillahirrahumanirrahim")
 st.header("Testing...")
 st.title("Bismillah")
 
-# st.subheader("Bismillahirrahumanirrahim")
+st.write("Test" , __name__)
 if __name__ == '__main_':
   app_user = st_user_login()
   st.write(" Ret Value", app_user)
