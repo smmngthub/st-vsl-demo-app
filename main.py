@@ -20,5 +20,5 @@ if __name__ == '__main__':
         ],
     }
   
-  pg = st.navigation(pages)
-  pg.run()
+    pg = st.navigation(pages)
+    pg.run()
