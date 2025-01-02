@@ -12,13 +12,13 @@ if __name__ == '__main__':
   app_user = st_user_login()
   st.write(" Ret Value", app_user)
 # st.switch_page("entry_screen.py")
-
-  pages = {
-      "Your account": [
-          st.Page("entry_screen.py", title="Create your account"),
-          #st.Page("entry_screen.py", title="Manage your account"),
-      ],
-  }
+  if app_user == "VSL":
+    pages = {
+        "Your account": [
+            st.Page("entry_screen.py", title="Create your account"),
+            #st.Page("entry_screen.py", title="Manage your account"),
+        ],
+    }
   
   pg = st.navigation(pages)
   pg.run()
