@@ -14,7 +14,7 @@ elif app_user == "TBT":
   st.toast("Hi you are in TBT Application")
   # Build the sidebar
   # Build the Main Navigations
-elif:
+else:
   st.toast("Somehting wrong Happened")
   st.error("Somehting wrong Happened")
 
