@@ -11,7 +11,8 @@ def st_user_login():
     
     # trimmed_user_name = user_name.trim()
     # trimmed_user_pwd = user_pwd.trim() 
-    if len(user_name) > 1 and user_name = "Vessel123" and user_pwd = "Hey@123"
+    # if len(user_name) > 1 and user_name = "Vessel123" and user_pwd = "Hey@123"
+    if user_name == "Vessel123" and user_pwd == "Hey@123"  
       st.snow()
       st.success("You have successfully logged in to the system")
     elif:
