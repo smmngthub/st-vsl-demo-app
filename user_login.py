@@ -5,7 +5,7 @@ def st_user_login():
 
   try: 
     user_name = st.text_input(label="User Name", value="Admin", placeholder="Please Enter Your Login", max_chars=20)
-    user_pwd = st.text_input(label="Password", placeholder="Please enter your passwod", max_chars=25)
+    user_pwd = st.text_input(label="Password", type="password", placeholder="Please enter your passwod", max_chars=25)
 
     submitted = st.button("Login")
     
