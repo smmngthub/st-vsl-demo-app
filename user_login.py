@@ -16,7 +16,7 @@ def st_user_login():
       if user_name == "Vessel123" and user_pwd == "Hey@123":  
         st.snow()
         st.success("You have successfully logged in to the system")
-      elif:
+      else:
         st.error("Error, entering user name and/or password. Please contact the Administrator")
     return submitted
   except:
