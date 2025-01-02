@@ -16,7 +16,7 @@ if __name__ == '__main__':
   pages = {
       "Your account": [
           st.Page("entry_screen.py", title="Create your account"),
-          st.Page("entry_screen.py", title="Manage your account"),
+          #st.Page("entry_screen.py", title="Manage your account"),
       ],
   }
   
