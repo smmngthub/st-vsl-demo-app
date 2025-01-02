@@ -21,4 +21,5 @@ if __name__ == '__main__':
     }
   
     pg = st.navigation(pages)
-    pg.run()
+    # pg.run()
+    st.switch_page("entry_screen.py")
