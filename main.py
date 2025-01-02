@@ -19,7 +19,7 @@ elif app_user == "TBT":
   
   # Build the sidebar
   with st.sidebar:
-    st.[Donors]
+    pass
     
   # Build the Main Navigations
 else:
