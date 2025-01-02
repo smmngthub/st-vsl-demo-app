@@ -8,7 +8,7 @@ st.header("Testing...")
 st.title("Bismillah")
 
 st.write("Test" , __name__)
-if __name__ == '__main_':
+if __name__ == '__main__':
   app_user = st_user_login()
   st.write(" Ret Value", app_user)
 
