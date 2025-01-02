@@ -15,7 +15,7 @@ st.write(" Ret Value", app_user)
 if app_user == "VSL":
   st.toast("Hi you are in Vessel Application")
   # Build the sidebar
-  st.sidebar.subheader("Vessels")
+  # st.sidebar.subheader("Vessels")
   st.divider()
   # Build the Main Navigations  
   
