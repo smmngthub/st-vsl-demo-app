@@ -12,12 +12,13 @@ def st_user_login():
     # trimmed_user_name = user_name.trim()
     # trimmed_user_pwd = user_pwd.trim() 
     # if len(user_name) > 1 and user_name = "Vessel123" and user_pwd = "Hey@123"
-    if user_name == "Vessel123" and user_pwd == "Hey@123"  
-      st.snow()
-      st.success("You have successfully logged in to the system")
-    elif:
-      st.error("Error, entering user name and/or password. Please contact the Administrator")
-    
+    if submitted 
+      if user_name == "Vessel123" and user_pwd == "Hey@123":  
+        st.snow()
+        st.success("You have successfully logged in to the system")
+      elif:
+        st.error("Error, entering user name and/or password. Please contact the Administrator")
+    return submitted
   except:
     st.error(f"Error encountered in logging in {e}")
-  
+    st.stop()
