@@ -4,9 +4,8 @@ from user_login import st_user_login
 
 st.subheader("Bismillahirrahumanirrahim")
 
-
-app_user = st_user_login()
-st.write(" Ret Value", app_user)
+# app_user = st_user_login()
+# st.write(" Ret Value", app_user)
 """
 if app_user == "VSL":
   st.toast("Hi you are in Vessel Application")
