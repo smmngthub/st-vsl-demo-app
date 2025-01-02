@@ -14,7 +14,9 @@ if __name__ == '__main__':
   # pg = st.navigation([st.Page("page_1.py"), st.Page(page_2)])
   # pg.run()  
 
-  pg = st.navigation([st.Page("Vessel_Master.py"), st.Page("entry_screen.py")])
+  # pg = st.navigation([st.Page("Vessel_Master.py"), st.Page("entry_screen.py")])
+  
+
   #pg = st.navigation([st.Page("entry_screen.py")]) 
   # st.switch_page(pg)
   # if app_user == "VSL":
