@@ -6,3 +6,29 @@ st.write(" Bismillahirrahumanirrahim")
   
 st.header("Testing...")
 st.title("Bismillah")
+
+# st.subheader("Bismillahirrahumanirrahim")
+
+app_user = st_user_login()
+st.write(" Ret Value", app_user)
+"""
+if app_user == "VSL":
+  st.toast("Hi you are in Vessel Application")
+  # Build the sidebar
+  # st.sidebar.subheader("Vessels")
+  st.divider()
+  # Build the Main Navigations  
+elif app_user == "TBT":
+  
+  st.toast("Hi you are in TBT Application")
+  st.balloons()
+  
+  # Build the sidebar
+  # with st.sidebar:
+  #  pass
+    
+  # Build the Main Navigations
+else:
+  # st.toast("Somehting wrong Happened")
+  st.error("Somehting wrong Happened")
+"""
