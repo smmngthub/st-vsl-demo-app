@@ -11,7 +11,7 @@ st.write("Test" , __name__)
 if __name__ == '__main__':
   app_user = st_user_login()
   st.write(" Ret Value", app_user)
-# st.switch_page("entry_screen.py")
+  # st.switch_page("entry_screen.py")
   if app_user == "VSL":
     pages = {
         "Your account": [
