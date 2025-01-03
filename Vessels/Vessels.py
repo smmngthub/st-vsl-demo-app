@@ -63,6 +63,9 @@ def add_new_vessel():
   
   return None
 
+user_action = st.radio("Action", ["New Vessel", "Existing", "Amendment"])
+st.write("User Action is ", user_action) 
+
 NewVessel, ExistingVessels, Amendments = st.tabs(["New", "Existing", "Amendment"])
 with NewVessel:
   add_new_vessel()
