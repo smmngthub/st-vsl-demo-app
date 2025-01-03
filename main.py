@@ -4,6 +4,12 @@ if "logged_in" not in st.session_state:
     st.session_state.logged_in = False
 
 def login():
+    user_name = st.text_input(label="User Name", value="", placeholder="Please Enter Your Login", max_chars=20)
+    user_pwd = st.text_input(label="Password", type="password", 
+                             placeholder="Please enter your passwod", 
+                             help="Please enter your password",
+                             max_chars=25)
+
     if st.button("Log in"):
         st.session_state.logged_in = True
         st.rerun()
