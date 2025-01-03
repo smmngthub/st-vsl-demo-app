@@ -64,16 +64,17 @@ def fetch_tst_data():
     st.toast("Fetching ALL data!", icon='🎉') 
     return all_info
   except Exception as e:
-    st.error(f" There is a major problem with the ")
-  return None
+    st.error(f" There is a major problem with the retrival of data ::>>{e}")
+  # return None
   # st.info("Inside fetcg_tst_data - Before CLOSE")
 
 
 form_col, list_col = st.columns([4,1])
 df = fetch_tst_data()
 with form_col:
-  # st.write(" All Info", df) 
-  pass
+  #st.write(" All Info", df) 
+  if st.button("Delete All"):
+    pass
 with list_col:
   # st.dataframe(df)
   if st.button("Alert Me!"):
