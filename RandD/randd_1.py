@@ -75,9 +75,14 @@ def fetch_tst_data():
 
 def delete_tst_data():
   try:
+    st.toast("Inside DELETE ALL")
+    time.sleep(1)
     conn = sqlite3.connect('testdb.db')
     cur = conn.cursor()
     cur.execute("DELETE from tst_table")
+    st.toast("After DELETE ALL")
+    time.sleep(1)
+    
     # all_info = cur.fetchall()
     conn.commit()
     conn.close()
