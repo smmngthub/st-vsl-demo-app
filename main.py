@@ -82,7 +82,7 @@ if st.session_state.logged_in:
         {
             "Account": [logout_page, creatUser],
             "Vessels": [vessels, vessel_reports],
-            "Inspection & Survey": [inspection, surveys]
+            "Inspection & Survey": [inspection, surveys],
             "Reports": [dashboard, alerts],
             "Tools": [search, history],
             # "RandD": [test_form, test_child_table, img_related],
