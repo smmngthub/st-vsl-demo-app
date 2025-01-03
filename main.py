@@ -10,6 +10,18 @@ if "logged_in" not in st.session_state:
     side_bar_nav = st.get_option('client.showSidebarNavigation')
     st.toast(f" Side Bar Navigation is {side_bar_nav}")
 
+    st.set_page_config(
+        page_title="Ex-stream-ly Cool App",
+        page_icon="🧊",
+        layout="wide",
+        initial_sidebar_state="expanded",
+        menu_items={
+            'Get Help': 'https://www.extremelycoolapp.com/help',
+            'Report a bug': "https://www.extremelycoolapp.com/bug",
+            'About': "# This is a header. This is an *extremely* cool app!"
+        }
+    )
+
 def login():
     
     user_name = st.text_input(label="User Name", value="", placeholder="Please Enter Your Login", max_chars=20)
