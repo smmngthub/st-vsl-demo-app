@@ -78,7 +78,7 @@ def delete_tst_data():
     conn = sqlite3.connect('testdb.db')
     cur = conn.cursor()
     cur.execute("DELETE from tst_table")
-    all_info = cur.fetchall()
+    # all_info = cur.fetchall()
     conn.commit()
     conn.close()
     st.toast("DELET ing ALL data!", icon='🎉') 
