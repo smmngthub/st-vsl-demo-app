@@ -21,8 +21,9 @@ def test_form():
 
     btn_submit = st.form_submit_button(label="Submit")
     if btn_submit:
+      st.info("You are inside SUBIT Button")
       add_test_data(name, age, dob)  
-      pass
+      # pass
 
 def add_test_data(a, b, c):
   cur.execute("""CREATE TABLE IF NOT EXISTS tst_table(NAME TEXT(50), AGE TEXT(50), DOB TEXT(20));""")
