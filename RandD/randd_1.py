@@ -67,4 +67,12 @@ with form_col:
 with list_col:
     st.dataframe(df)
 
+tab1, tab2, tab3 = st.tabs(["Entry", "🗃 Listing", "Selection"])
+
+with tab1:
+  pass
+with tab2:
+  pass
+with tab3:
+  pass
 
