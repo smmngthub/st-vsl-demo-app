@@ -108,7 +108,7 @@ with list_col:
     #send_alert("This is an ALERT Message")  # This is not working as the from ... import send_alert is NOT working
   #pass
 
-def dataframe_delected(df):
+def dataframe_selected(df):
   df_copy = df.copy()
   df_copy.insert(0, 'Action', True)
 
@@ -145,7 +145,7 @@ with tab4:
   st.dataframe(df)
 with tab5:
   df = fetch_tst_data()
-  selected = dataframe_delected(df)
+  selected = dataframe_selected(df)
   st.dataframe(selected)
   
 
