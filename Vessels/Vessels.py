@@ -10,7 +10,7 @@ st.title(":green[Add Vessel]")
 
 def add_new_vessel():
 
-  col_left, col_right = st.columns([2, 1])
+  col_left, col_right = st.columns([1, 1])
 
   with col_left:
     Vessel_Number = st.text_input("Vessel Number")
@@ -39,17 +39,17 @@ def add_new_vessel():
     Passanger_Capacity = st.text_input("Passanger Capacity")
     Chassis_Number = st.text_input("Chassis Number")
     Manufacture = st.text_input("Manufacture")
-    Last_Departure_Date  = st.text_input("Last Departure Date")
+    Last_Departure_Date  = st.date_input("Last Departure Date")
     Last_Service_Reading  = st.text_input("Last Service Reading")
-    Last_Service_Date  = st.text_input("Last Service Date")
-    Registration_Exp_Date  = st.text_input("Registration Exp Date")
+    Last_Service_Date  = st.date_input("Last Service Date")
+    Registration_Exp_Date  = st.date_input("Registration Exp Date")
 
     Operator_Name  = st.text_input("Operator Name")
     Maintenance_Priority  = st.text_input("Maintenance Priority")
     Normal  = st.text_input("Normal")
     Ownership_Mode  = st.text_input("Ownership Mode")
     Vessel_Note  = st.text_input("Vessel Note")
-    Vessel_Image  = st.text_input("Vessel Image")
+    Vessel_Image  = st.text_input("Vessel Image") # Upload Image 
     GPS_EnabledDevice_ID  = st.text_input("GPS EnabledDevice ID")
     GPS_Vessel_ID  = st.text_input("GPS Vessel ID")
   
