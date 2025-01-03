@@ -54,21 +54,6 @@ pg.run()
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #from user_login import st_user_login 
 # st.write(" Bismillahirrahumanirrahim")
 #st.header("Testing...")
