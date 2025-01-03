@@ -63,16 +63,17 @@ test_form()
 form_col, list_col = st.columns([2,1])
 df = fetch_tst_data()
 with form_col:
-  st.write(" All Info", df) 
+  # st.write(" All Info", df) 
+  pass
 with list_col:
-    st.dataframe(df)
-
+  # st.dataframe(df)
+  pass
 tab1, tab2, tab3 = st.tabs(["Entry", "🗃 Listing", "Selection"])
 
 with tab1:
   pass
 with tab2:
-  pass
+  st.write(" All Info", df) 
 with tab3:
-  pass
+  st.dataframe(df)
 
