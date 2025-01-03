@@ -4,6 +4,7 @@ import streamlit as st
 import pandas as pd 
 import datetime # to capture the DOB
 import time
+import streamlit_push_notifications import send_alert
 
 import sqlite3  # to store the information in the local database
 conn = sqlite3.connect('testdb.db', check_same_thread=False)
@@ -59,14 +60,16 @@ def fetch_tst_data():
   # st.info("Inside fetcg_tst_data - Before CLOSE")
 
 
-form_col, list_col = st.columns([2,1])
+form_col, list_col = st.columns([4,1])
 df = fetch_tst_data()
 with form_col:
   # st.write(" All Info", df) 
   pass
 with list_col:
   # st.dataframe(df)
-  pass
+  if st.button("Alert Me!"):
+    send_alert("This is an ALERT Message")  
+  #pass
 tab1, tab2, tab3 = st.tabs(["Entry", "🗃 Listing", "Selection"])
 
 with tab1:
