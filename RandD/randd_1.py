@@ -107,6 +107,23 @@ with list_col:
     pass
     #send_alert("This is an ALERT Message")  # This is not working as the from ... import send_alert is NOT working
   #pass
+
+def dataframe_delected(df):
+  df_copy = df.copy()
+  df_copy.insert(0, 'Action', True)
+
+  edited_df = st.data_editor(
+    df_copy, hide_index=True, 
+    column_config={
+      "Action": st.column_config.CheckboxColumn(required=True)
+    },
+    disabled=df.columns,
+  )
+  
+  selected_rows = edited_df[edited_df.Action]
+  
+  return selected_rows.drop(['Action'], axis=1)
+
 tab1, tab2, tab3, tab4, tab5 = st.tabs(["Add Entry", "🗃 View Info (Table)", "View Info (Tree)", "Delete Info", "AgGrid"])
 
 with tab1:
@@ -127,6 +144,10 @@ with tab4:
   df = pd.DataFrame(fetch_tst_data())
   st.dataframe(df)
 with tab5:
-  pass
+  df = fetch_tst_data()
+  selected = dataframe_delected(df)
+  st.dataframe(selected)
+  
+
   
 
