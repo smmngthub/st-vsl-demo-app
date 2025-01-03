@@ -4,7 +4,7 @@ import streamlit as st
 from PIL import Image
 import os
 
-st.title(":blue[You are in Image Related R & D]") # :red
+st.title(":blue[You are in Photo Upload Section]") # :red
 
 def load_image(image_file):
   img = Image.open(image_file)
