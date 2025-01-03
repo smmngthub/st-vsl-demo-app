@@ -4,7 +4,7 @@ import streamlit as st
 import pandas as pd 
 import datetime # to capture the DOB
 import time
-from streamlit_push_notifications import send_alert
+# from streamlit_push_notifications import send_alert
 
 import sqlite3  # to store the information in the local database
 conn = sqlite3.connect('testdb.db', check_same_thread=False)
