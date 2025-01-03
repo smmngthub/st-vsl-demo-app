@@ -3,8 +3,8 @@
 import streamlit as st
 import datetime # to capture the DOB
 import sqlite3  # to store the information in the local database
-conn = sqlite3.connect('testdb.db', check_same_thread=False)
-cur = conn.cursor()
+# conn = sqlite3.connect('testdb.db', check_same_thread=False)
+# cur = conn.cursor()
 
 st.title("You are in RANDD_1.py page")
 st.snow()
@@ -21,8 +21,8 @@ def test_form():
 
     btn_submit = st.form_submit_button(label="Submit")
     if btn_submit:
-      add_test_data(name, age, dob)  
-
+      #add_test_data(name, age, dob)  
+      pass
 
 def add_test_data(a, b, c):
   cur.execute("""
