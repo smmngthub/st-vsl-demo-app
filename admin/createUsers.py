@@ -4,9 +4,9 @@ import streamlit as st
 st.title(":Orange[User Creation]")
 def create_new_users():
 
-  with st.form(key="user_creation")
-    user_name = st.text_input("Useer Name")
-    st.write("USer Name", user_name)
+  # with st.form(key="user_creation")
+  user_name = st.text_input("Useer Name")
+  st.write("USer Name", user_name)
     
   
   return True
