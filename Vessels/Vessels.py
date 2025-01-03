@@ -10,7 +10,7 @@ st.title(":green[Add Vessel]")
 
 def add_new_vessel():
 
-  col_left, col_right = st.cols([2, 1])
+  col_left, col_right = st.columns([2, 1])
 
   with col_left:
     Vessel_Number = st.text_input("Vessel Number")
