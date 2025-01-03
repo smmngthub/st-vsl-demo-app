@@ -78,7 +78,7 @@ if st.session_state.logged_in:
     pg = st.navigation(
         {
             "Account": [logout_page, creatUser],
-            "Vessels": [vessles, vessel_reports],
+            "Vessels": [vessels, vessel_reports],
             "Reports": [dashboard, bugs, alerts],
             "Tools": [search, history],
             # "RandD": [test_form, test_child_table, img_related],
