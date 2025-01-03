@@ -23,6 +23,6 @@ def test_form():
       st.success("You have successfully submitted the details. Thank you!")
       st.balloons()
       
-
+test_form()
 
 
