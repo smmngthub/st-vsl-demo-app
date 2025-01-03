@@ -25,7 +25,7 @@ def test_form():
 
     btn_submit = st.form_submit_button(label="Submit")
     if btn_submit:
-      st.toast("Infor is being SUBMITTED...")
+      st.toast("Information is being SUBMITTED...")
       time.sleep(.5)
       # st.info("You are inside SUBIT Button")
       add_test_data(name, age, dob)  
@@ -58,7 +58,6 @@ def fetch_tst_data():
   return all_info
   # st.info("Inside fetcg_tst_data - Before CLOSE")
 
-test_form()
 
 form_col, list_col = st.columns([2,1])
 df = fetch_tst_data()
@@ -71,6 +70,7 @@ with list_col:
 tab1, tab2, tab3 = st.tabs(["Entry", "🗃 Listing", "Selection"])
 
 with tab1:
+  test_form()
   pass
 with tab2:
   st.write(" All Info", df) 
