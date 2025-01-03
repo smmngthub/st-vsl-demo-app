@@ -29,7 +29,7 @@ def st_user_login():
         # st.switch_page("entry_screen.py")
       else:
         st.error("Error, entering user name and/or password. Please contact the Administrator")
-    return go_to_app
+    # return go_to_app
   except Exception as e:
     st.error(f"Error encountered in logging in {e}")
-    st.stop()
+    # st.stop()
