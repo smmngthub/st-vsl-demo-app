@@ -1,8 +1,10 @@
 # Bismillahirrahumanirrahim
 # https://fonts.google.com/icons?icon.size=24&icon.color=%23e8eaed - Reference for Icons
 import streamlit as st
+import pandas as pd 
 import datetime # to capture the DOB
 import time
+
 import sqlite3  # to store the information in the local database
 conn = sqlite3.connect('testdb.db', check_same_thread=False)
 cur = conn.cursor()
@@ -23,17 +25,16 @@ def test_form():
 
     btn_submit = st.form_submit_button(label="Submit")
     if btn_submit:
-      st.info("You are inside SUBIT Button")
+      st.toast("Infor is being SUBMITTED...")
+      time.sleep(.5)
+      # st.info("You are inside SUBIT Button")
       add_test_data(name, age, dob)  
-      # pass
 
 def add_test_data(a, b, c):
-  # st.info("Inside add_test_data")
-  st.toast("INSIDE ADDDD data...")
+  st.toast("CREAT ing TABLE...")
   time.sleep(.5)
   cur.execute("""CREATE TABLE IF NOT EXISTS tst_table(NAME TEXT(50), AGE TEXT(50), DOB TEXT(20));""")
-  # st.info("Inside add_test_data - Before INSERT")
-  st.toast("CREATING TABLE...")
+  st.toast("INSERT ing to TABLE...")
   time.sleep(.5)
 
   cur.execute("INSERT INTO tst_table VALUES (?, ?, ?)", (a, b, c))
@@ -42,9 +43,7 @@ def add_test_data(a, b, c):
   time.sleep(.5)
 
   conn.commit()
-  # st.info("Inside add_test_data - Before CLOSE")
-
-  #conn.close()
+  #conn.close() # Not Closing it here are we need the connection later to retrieve the data
   #st.success("You have successfully submitted the details. Thank you!")
   st.balloons()  
 # Calling the form 
@@ -53,13 +52,19 @@ def fetch_tst_data():
   time.sleep(.5)
   cur.execute("SELECT * from tst_table")
   all_info = cur.fetchall()
-  st.write(" All Info", all_info) 
-  st.dataframe(all_info)
+
   conn.commit()
-  st.toast("Fetching ALL data!", icon='🎉')  
+  st.toast("Fetching ALL data!", icon='🎉') 
+  return all_info
   # st.info("Inside fetcg_tst_data - Before CLOSE")
 
-test_form()
-fetch_tst_data()
+form_col, list_col = st.columns([1,2)
+df = fetch_tst_data()
 
+with form_col:
+  test_form()
+with list_col:
+    st.dataframe(df)
+
+st.write(" All Info", df) 
 
