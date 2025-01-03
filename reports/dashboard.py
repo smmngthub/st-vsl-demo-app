@@ -20,6 +20,18 @@ b.metric("Wind", "4 mph", "2 mph", border=True)
 c.metric("Humidity", "77%", "5%", border=True)
 d.metric("Pressure", "30.34 inHg", "-2 inHg", border=True)
 
+
+st.bar_chart({"data": [1, 5, 2, 6, 2, 1]})
+
+with st.expander("See explanation"):
+    st.write('''
+        The chart above shows some numbers I picked for you.
+        I rolled actual dice for these, so they're *guaranteed* to
+        be random.
+    ''')
+    st.image("https://static.streamlit.io/examples/dice.jpg")
+
+
 st.title("Interactive Data Visualization")
 
 # Slider for selecting a number
