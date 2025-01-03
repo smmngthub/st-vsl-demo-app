@@ -26,7 +26,7 @@ def login():
         st.rerun()
 
 def logout():
-    st.header("Thank for using this Application!. Hope You enjoyed it!!!")
+    st.header("Thank for using this Application!. \n \n \n Hope You enjoyed it!!!")
     
     if st.button("Log out"):
         st.session_state.logged_in = False
