@@ -3,7 +3,8 @@
 import streamlit as st
 import datetime # to capture the DOB
 import sqlite3  # to store the information in the local database
-conn = sqlite3.connect('testdb.db', check_Same_thread=False)
+conn = sqlite3.connect('testdb.db', check_same_thread=False)
+cur = conn.cursor()
 
 st.title("You are in RANDD_1.py page")
 st.snow()
