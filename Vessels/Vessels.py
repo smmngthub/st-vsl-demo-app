@@ -6,14 +6,7 @@ import datetime
 st.title(":green[Add Vessel]")
 
 # New Vessels & List of Existing Vessels
-NewVessel, ExistingVessels, Amendments = st.tabs(["New", "Existing", "Amendment"])
-with NewVessel:
-  add_new_vessel()
-  pass
-with ExistingVessels:
-  pass
-with Amendments:
-  pass
+
 
 def add_new_vessel():
   Vessel_Number = st.text_input("Vessel Number")
@@ -59,3 +52,12 @@ def add_new_vessel():
   
   return true
 
+NewVessel, ExistingVessels, Amendments = st.tabs(["New", "Existing", "Amendment"])
+with NewVessel:
+  add_new_vessel()
+  pass
+with ExistingVessels:
+  pass
+with Amendments:
+  pass
+  
