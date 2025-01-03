@@ -26,10 +26,10 @@ if image_file is not None:
   st.write(file_details)
   st.success("File Saved")
 
-  video_file = open("myvideo.mp4", "rb")
-  video_bytes = video_file.read()
+  # video_file = open("myvideo.mp4", "rb")
+  # video_bytes = video_file.read()
 
-  st.video(video_bytes)
+  # st.video(video_bytes)
 
   VIDEO_URL = "https://example.com/not-youtube.mp4"
   st.video(VIDEO_URL, subtitles="subtitles.vtt")
