@@ -71,13 +71,19 @@ test_form = st.Page("RandD/randd_1.py", title="Sqlite3", icon=":material/rule_se
 test_child_table = st.Page("RandD/forrm_with_child_table.py", title="Form Child Table", icon=":material/foot_bones:")
 img_related = st.Page("RandD/img_related.py", title="Image Related", icon=":material/eyeglasses:")
 
+vessels = st.Page("Vessels/Vessels.py", title="Vessels", icon=":material/:houseboat")
+vessel_reports = st.Page("Vessels/Vessel Reports.py", title="Vessel Reports", icon=":material/tsunami:")
+
+
+
 if st.session_state.logged_in:
     pg = st.navigation(
         {
             "Account": [logout_page, creatUser],
+            "Vessels": [vessles, vessel_reports]
             "Reports": [dashboard, bugs, alerts],
             "Tools": [search, history],
-            "RandD": [test_form, test_child_table, img_related],
+            # "RandD": [test_form, test_child_table, img_related],
         }
     )
 else:
