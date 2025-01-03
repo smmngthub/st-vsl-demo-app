@@ -58,7 +58,7 @@ def fetch_tst_data():
   return all_info
   # st.info("Inside fetcg_tst_data - Before CLOSE")
 
-form_col, list_col = st.columns([1,2)
+form_col, list_col = st.columns([1,2])
 df = fetch_tst_data()
 
 with form_col:
