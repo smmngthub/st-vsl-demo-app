@@ -2,7 +2,7 @@
 
 import streamlit as st
 import numpy as np
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 
 st.title("Dash Board")
 
@@ -25,6 +25,6 @@ number = st.slider("Select a number", 1, 100)
 data = np.random.randn(number)
 
 # Create a histogram
-plt.hist(data, bins=20)
-st.pyplot(plt)
+# plt.hist(data, bins=20)
+# st.pyplot(plt)
 
