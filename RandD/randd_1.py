@@ -41,8 +41,8 @@ def add_test_data(a, b, c):
 def fetch_tst_data():
   st.warning("Inside fetch_tst_data 1234")
   cur.execute("SELECT * from tst_table")
-  # all_info = cur.fetchall()
-  # st.write(" All Info", all_info)   
+  all_info = cur.fetchall()
+  st.write(" All Info", all_info)   
 
 test_form()
 fetch_tst_data()
