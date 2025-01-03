@@ -17,13 +17,16 @@ def login():
         st.session_state.logged_in = True
         time.sleep(.5)
         st.toast(f'Welcome Mr. {user_name}!', icon='🎉')
-        time.sleep(.5)
+        time.sleep(1)
+        st.snow()
         st.rerun()
 
 def logout():
     if st.button("Log out"):
         st.session_state.logged_in = False
         st.toast('See you soon!', icon='😍')
+        time.sleep(1)
+        st.balloon()
         st.rerun()
 
 login_page = st.Page(login, title="Log in", icon=":material/login:")
