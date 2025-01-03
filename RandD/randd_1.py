@@ -2,11 +2,13 @@
 # https://fonts.google.com/icons?icon.size=24&icon.color=%23e8eaed - Reference for Icons
 import streamlit as st
 import datetime # to capture the DOB
+import time
 import sqlite3  # to store the information in the local database
 conn = sqlite3.connect('testdb.db', check_same_thread=False)
 cur = conn.cursor()
 
 st.title("You are in RANDD_1.py page")
+# st.title (":balloon:")
 st.snow()
 st.toast("Welcome to the R & D World")
 
@@ -26,25 +28,36 @@ def test_form():
       # pass
 
 def add_test_data(a, b, c):
-  st.info("Inside add_test_data")
+  # st.info("Inside add_test_data")
+  st.toast("INSIDE ADDDD data...")
+  time.sleept(.5)
   cur.execute("""CREATE TABLE IF NOT EXISTS tst_table(NAME TEXT(50), AGE TEXT(50), DOB TEXT(20));""")
-  st.info("Inside add_test_data - Before INSERT")
+  # st.info("Inside add_test_data - Before INSERT")
+  st.toast("CREATING TABLE...")
+  time.sleept(.5)
+
   cur.execute("INSERT INTO tst_table VALUES (?, ?, ?)", (a, b, c))
-  st.info("Inside add_test_data - Before COMMIT")
+  # st.info("Inside add_test_data - Before COMMIT")
+  st.toast("Performing COMMIT...", icon='😍')
+  time.sleept(.5)
+
   conn.commit()
-  st.info("Inside add_test_data - Before CLOSE")
+  # st.info("Inside add_test_data - Before CLOSE")
 
   #conn.close()
   #st.success("You have successfully submitted the details. Thank you!")
   st.balloons()  
 # Calling the form 
 def fetch_tst_data():
-  st.warning("Inside fetch_tst_data 1234")
+  st.toast("Fetching data...")
+  time.sleept(.5)
   cur.execute("SELECT * from tst_table")
   all_info = cur.fetchall()
-  st.write(" All Info", all_info)   
+  st.write(" All Info", all_info) 
+  st.dataframe(all_info)
   conn.commit()
-  st.info("Inside add_test_data - Before CLOSE")
+  st.toast("Fetching ALL data!", icon='🎉')  
+  # st.info("Inside fetcg_tst_data - Before CLOSE")
 
 test_form()
 fetch_tst_data()
