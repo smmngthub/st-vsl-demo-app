@@ -79,8 +79,10 @@ elif user_action == "Existing":
   list_existing_vessel()
 elif user_action == "Amendment":
   # st.write("Amendment Vessel ", user_action)
+  pass
 elif user_action == "TAB Format":
   # st.write("TAB ", user_action)
+  pass
   
   NewVessel, ExistingVessels, Amendments = st.tabs(["New", "Existing", "Amendment"])
   with NewVessel:
