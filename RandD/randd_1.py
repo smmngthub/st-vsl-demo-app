@@ -7,8 +7,8 @@ import time
 # from streamlit_push_notifications import send_alert
 
 import sqlite3  # to store the information in the local database
-# conn = sqlite3.connect('testdb.db', check_same_thread=False)
-# cur = conn.cursor()
+conn = sqlite3.connect('testdb.db', check_same_thread=False)
+cur = conn.cursor()
 # st.write(" Connection :", conn) 
 # st.write(" Cur: " , cur)
 # st.title("You are in RANDD_1.py page")
@@ -40,8 +40,8 @@ def test_form():
 def add_test_data(a, b, c):
   st.toast("CREAT ing TABLE...")
   time.sleep(.5)
-  conn = sqlite3.connect('testdb.db')
-  cur = conn.cursor()
+  # conn = sqlite3.connect('testdb.db')
+  # cur = conn.cursor()
   cur.execute("""CREATE TABLE IF NOT EXISTS tst_table(NAME TEXT(50), AGE TEXT(50), DOB TEXT(20));""")
   st.toast("INSERT ing to TABLE...")
   time.sleep(.5)
@@ -61,7 +61,7 @@ def fetch_tst_data():
   time.sleep(.5)
   try:
     conn = sqlite3.connect('testdb.db')
-    cur = conn.cursor(
+    cur = conn.cursor()
     cur.execute("SELECT * from tst_table")
     all_info = cur.fetchall()
     conn.commit()
