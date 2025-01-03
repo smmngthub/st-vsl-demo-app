@@ -53,7 +53,7 @@ def add_test_data(a, b, c):
 
   conn.commit()
   conn.close() # Not Closing it here are we need the connection later to retrieve the data
-  #st.success("You have successfully submitted the details. Thank you!")
+  st.success("You have successfully submitted the details. Thank you!")
   st.balloons()  
 # Calling the form 
 def fetch_tst_data():
