@@ -40,7 +40,7 @@ def add_test_data(a, b, c):
 # Calling the form 
 def fetch_tst_data():
   st.warning("Inside fetch_tst_data")
-  # cur.execute("SELECT * from tst_tables")
+  cur.execute("SELECT * from tst_table")
   # all_info = cur.fetchall()
   # st.write(" All Info", all_info)   
 
