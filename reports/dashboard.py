@@ -4,7 +4,7 @@ import streamlit as st
 import numpy as np
 # import matplotlib.pyplot as plt
 
-st.title("Dash Board")
+# st.title("Dash Board")
 title_writing = "Dash Board"
 title_format = f'<p style="text-align: center; font-family: ' \
                f'Arial; color: #808080; font-size: 40px; ' \
