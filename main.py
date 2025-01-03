@@ -51,17 +51,19 @@ alerts = st.Page(
 search = st.Page("tools/search.py", title="Search", icon=":material/search:")
 history = st.Page("tools/history.py", title="History", icon=":material/history:")
 
-#creatUser = st.Page("admin/createUsers.py", title="Creat Users", icon=":material/search:")
+creatUser = st.Page("admin/createUsers.py", title="Create Users", icon=":material/man:")
 
 test_form = st.Page("RandD/randd_1.py", title="Sqlite3", icon=":material/rule_settings:")
+test_child_table = st.Page("RandD/form_with_child_table.py", title="Form Child Table", icon=":material/foot_bones:")
+img_related = st.Page("RandD/image_related.py", title="Image Related", icon=":material/eyeglasses:")
 
 if st.session_state.logged_in:
     pg = st.navigation(
         {
-            "Account": [logout_page],
+            "Account": [logout_page, creatUser],
             "Reports": [dashboard, bugs, alerts],
             "Tools": [search, history],
-            "RandD": [test_form],
+            "RandD": [test_form, test_child_table, img_related],
         }
     )
 else:
