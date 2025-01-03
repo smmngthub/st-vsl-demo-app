@@ -74,7 +74,7 @@ def fetch_tst_data():
   # st.info("Inside fetcg_tst_data - Before CLOSE")
 
 
-df = fetch_tst_data()
+# df = fetch_tst_data()
 
 form_col, list_col = st.columns([4,1])
 with form_col:
@@ -95,13 +95,16 @@ with tab1:
   # pass
 with tab2:
   # if len(df) > 0:
+  df = fetch_tst_data()
   st.dataframe(df)
   #pass
 with tab3:
   #if len(df) > 0:
+  df = fetch_tst_data()
   st.write(" All Info", df)
 with tab4:
   #if len(df) > 0:
+  df = fetch_tst_data()
   st.dataframe(df)
 
 
