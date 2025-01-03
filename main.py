@@ -7,6 +7,7 @@ if "logged_in" not in st.session_state:
     st.toast('Welcome Guest!', icon='😍')
 
 def login():
+    st.logo("logo/sample_logo_image.jpg")
     user_name = st.text_input(label="User Name", value="", placeholder="Please Enter Your Login", max_chars=20)
     user_pwd = st.text_input(label="Password", type="password", 
                              placeholder="Please enter your passwod", 
