@@ -96,7 +96,7 @@ if st.session_state.logged_in:
             "Vessels": [vessels, vessel_reports],
             "Inspection & Survey": [inspection, surveys],
             "Reports": [dashboard, alerts],
-            "Tools": [search, phot_upload, history],
+            "Tools": [search, photo_upload, history],
             # "RandD": [test_form, test_child_table, img_related],
         }
     )
