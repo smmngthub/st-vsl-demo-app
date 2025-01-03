@@ -45,7 +45,7 @@ def add_new_vessel():
   GPS_EnabledDevice_ID  = st.text_input("GPS EnabledDevice ID")
   GPS_Vessel_ID  = st.text_input("GPS Vessel ID")
   
-  if st.submit("Add Vessel"):
+  if st.button("Add Vessel"):
     st.success("You have successfully added the new vessel {Vessel_Name}")
     st.balloons()
     time.sleep(1)
