@@ -25,14 +25,14 @@ def test_form():
       pass
 
 def add_test_data(a, b, c):
-  cur.execute("""
-    CREATE TABLE IF NOT EXISTS tst_table(NAME TEXT(50), AGE TEXT(50), DOB TEXT(20));""")
-    cur.execute("INSERT INTO tst_table VALUES (?, ?, ?)", (a, b, c))
-    conn.commit()
-    conn.close()
-    st.success("You have successfully submitted the details. Thank you!")
-    st.balloons()  
+  cur.execute("""CREATE TABLE IF NOT EXISTS tst_table(NAME TEXT(50), AGE TEXT(50), DOB TEXT(20));""")
+  cur.execute("INSERT INTO tst_table VALUES (?, ?, ?)", (a, b, c))
+  conn.commit()
+  conn.close()
+  st.success("You have successfully submitted the details. Thank you!")
+  st.balloons()  
 # Calling the form 
+
 test_form()
 
 
