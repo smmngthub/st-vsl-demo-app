@@ -30,7 +30,7 @@ def test_form():
 def add_test_data(a, b, c):
   # st.info("Inside add_test_data")
   st.toast("INSIDE ADDDD data...")
-  time.sleept(.5)
+  time.sleep(.5)
   cur.execute("""CREATE TABLE IF NOT EXISTS tst_table(NAME TEXT(50), AGE TEXT(50), DOB TEXT(20));""")
   # st.info("Inside add_test_data - Before INSERT")
   st.toast("CREATING TABLE...")
@@ -39,7 +39,7 @@ def add_test_data(a, b, c):
   cur.execute("INSERT INTO tst_table VALUES (?, ?, ?)", (a, b, c))
   # st.info("Inside add_test_data - Before COMMIT")
   st.toast("Performing COMMIT...", icon='😍')
-  time.sleept(.5)
+  time.sleep(.5)
 
   conn.commit()
   # st.info("Inside add_test_data - Before CLOSE")
@@ -50,7 +50,7 @@ def add_test_data(a, b, c):
 # Calling the form 
 def fetch_tst_data():
   st.toast("Fetching data...")
-  time.sleept(.5)
+  time.sleep(.5)
   cur.execute("SELECT * from tst_table")
   all_info = cur.fetchall()
   st.write(" All Info", all_info) 
