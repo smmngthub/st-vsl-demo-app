@@ -1,7 +1,10 @@
 # Bismillahirrahumanirrahim
 import streamlit as st
+import time
+
 if "logged_in" not in st.session_state:
     st.session_state.logged_in = False
+    st.toast('Welcome Guest!', icon='😍')
 
 def login():
     user_name = st.text_input(label="User Name", value="", placeholder="Please Enter Your Login", max_chars=20)
@@ -12,11 +15,15 @@ def login():
 
     if st.button("Log in"):
         st.session_state.logged_in = True
+        time.sleep(.5)
+        st.toast(f'Welcome Mr. {user_name}!', icon='🎉')
+        time.sleep(.5)
         st.rerun()
 
 def logout():
     if st.button("Log out"):
         st.session_state.logged_in = False
+        st.toast('See you soon!', icon='😍')
         st.rerun()
 
 login_page = st.Page(login, title="Log in", icon=":material/login:")
