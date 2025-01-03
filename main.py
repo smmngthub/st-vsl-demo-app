@@ -26,7 +26,7 @@ def logout():
         st.session_state.logged_in = False
         st.toast('See you soon!', icon='😍')
         time.sleep(1)
-        st.balloon()
+        st.balloons()
         st.rerun()
 
 login_page = st.Page(login, title="Log in", icon=":material/login:")
@@ -43,6 +43,8 @@ alerts = st.Page(
 
 search = st.Page("tools/search.py", title="Search", icon=":material/search:")
 history = st.Page("tools/history.py", title="History", icon=":material/history:")
+
+#creatUser = st.Page("admin/createUsers.py", title="Creat Users", icon=":material/search:")
 
 if st.session_state.logged_in:
     pg = st.navigation(
