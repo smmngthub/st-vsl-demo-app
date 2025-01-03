@@ -7,7 +7,7 @@ st.title(":green[Add Vessel]")
 # New Vessels & List of Existing Vessels
 
 
-NewVessel, ExistingVessels, Amendments = st.tabs(["New", "Existing", "Amendment"])\
+NewVessel, ExistingVessels, Amendments = st.tabs(["New", "Existing", "Amendment"])
 with NewVessel:
   pass
 with ExistingVessels:
@@ -38,7 +38,7 @@ Business_Unit  = st.text_input("Business Unit")
 Vessel_Value  = st.text_input("Vessel Value")
 Purchase_Date  = st.date_input("Purchase Date")
 Warranty_Date  = st.date_input("Warranty Date")
-Required_Geo_Location while Inspection  = st.checkbox("Geo Location")
+Required_Geo_Location_while_Inspection  = st.checkbox("Geo Location")
 Assign_Inspection_Form  = st.text_input("Assign Inspection Form")
 
 
