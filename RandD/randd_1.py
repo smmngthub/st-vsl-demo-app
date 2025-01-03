@@ -110,7 +110,7 @@ with list_col:
 
 def dataframe_selected(df):
   df_copy = df.copy()
-  df_copy.insert(0, 'Action')
+  df_copy.insert(0, 'Action', True)
 
   edited_df = st.data_editor(
     df_copy, hide_index=True, 
