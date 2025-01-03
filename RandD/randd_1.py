@@ -58,13 +58,13 @@ def fetch_tst_data():
   return all_info
   # st.info("Inside fetcg_tst_data - Before CLOSE")
 
+test_form()
+
 form_col, list_col = st.columns([2,1])
 df = fetch_tst_data()
-
 with form_col:
-  test_form()
+  st.write(" All Info", df) 
 with list_col:
     st.dataframe(df)
 
-st.write(" All Info", df) 
 
