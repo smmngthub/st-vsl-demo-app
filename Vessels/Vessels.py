@@ -64,6 +64,7 @@ def add_new_vessel():
   return None
 
 def list_existing_vessel():
+  sst.write("Amendments")
   pass
   
 user_action = st.radio("Action", ["New Vessel", "Existing", "Amendment", "TAB Format"], horizontal=True)
@@ -71,15 +72,15 @@ user_action = st.radio("Action", ["New Vessel", "Existing", "Amendment", "TAB Fo
 st.divider()
 
 if user_action == "New Vessel":
-  st.write("New Vessel ", user_action)
+  # st.write("New Vessel ", user_action)
   add_new_vessel()
 elif user_action == "Existing":
-  st.write("Existing ", user_action)
+  # st.write("Existing ", user_action)
   list_existing_vessel()
 elif user_action == "Amendment":
-  st.write("Amendment Vessel ", user_action)
+  # st.write("Amendment Vessel ", user_action)
 elif user_action == "TAB Format":
-  st.write("TAB ", user_action)
+  # st.write("TAB ", user_action)
   
   NewVessel, ExistingVessels, Amendments = st.tabs(["New", "Existing", "Amendment"])
   with NewVessel:
