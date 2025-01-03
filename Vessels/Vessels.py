@@ -20,7 +20,7 @@ def add_new_vessel():
     Model = st.text_input("Model")
     Nautical_Reading = st.text_input("Nautical Reading")
     Nautical_Miles = st.text_input("Nautical Miles")
-    Status = st.selectbox("Status", ("Available", "In Maintenance", "Maintenance Required"),) # DD 
+    Status = st.selectbox(":green[*Status", ("Available", "In Maintenance", "Maintenance Required")]) # DD 
     Flag = st.text_input("Flag") # DD  -Country
     Port_of_Registry = st.text_input("Port of Registry")  
 
