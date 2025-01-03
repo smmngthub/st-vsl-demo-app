@@ -3,7 +3,8 @@ import streamlit as st
 import time
 
 st.logo("logo/sample_logo_image.jpg", icon_image="logo/sample_logo_image_1.jpg")
-# side_bar_nav = st.get_option('client.showSidebarNavigation')
+side_bar_nav = st.get_option('client.showSidebarNavigation')
+st.toast(f" Side Bar Navigation is {side_bar_nav}")
 if "logged_in" not in st.session_state:
     st.session_state.logged_in = False
     st.toast('Welcome Guest!', icon='😍')
@@ -25,6 +26,8 @@ def login():
         st.rerun()
 
 def logout():
+    st.header("Thank for using this Application!. Hope You enjoyed it!!!")
+    
     if st.button("Log out"):
         st.session_state.logged_in = False
         st.toast('See you soon!', icon='😍')
