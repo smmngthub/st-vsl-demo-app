@@ -57,7 +57,7 @@ logout_page = st.Page(logout, title="Log out", icon=":material/logout:")
 dashboard = st.Page(
     "reports/dashboard.py", title="Dashboard", icon=":material/dashboard:", default=True
 )
-bugs = st.Page("reports/bugs.py", title="Bug reports", icon=":material/bug_report:")
+# bugs = st.Page("reports/bugs.py", title="Bug reports", icon=":material/bug_report:")
 alerts = st.Page(
     "reports/alerts.py", title="System alerts", icon=":material/notification_important:"
 )
@@ -74,12 +74,16 @@ creatUser = st.Page("admin/createUsers.py", title="Create Users", icon=":materia
 vessels = st.Page("Vessels/Vessels.py", title="Vessels", icon=":material/houseboat:")
 vessel_reports = st.Page("Vessels/Vessel_Reports.py", title="Vessel Reports", icon=":material/tsunami:")
 
+inspection = = st.Page("Inspection & Survey/Inspection Forms.py", title="Inspection Forms", icon=":material/sailing:")
+surveys = = st.Page("Inspection & Survey/Inspection Report.py", title="Inspection Reports", icon=":material/surfing:")
+
 if st.session_state.logged_in:
     pg = st.navigation(
         {
             "Account": [logout_page, creatUser],
             "Vessels": [vessels, vessel_reports],
-            "Reports": [dashboard, bugs, alerts],
+            "Inspection & Survey": [inspection, surveys]
+            "Reports": [dashboard, alerts],
             "Tools": [search, history],
             # "RandD": [test_form, test_child_table, img_related],
         }
