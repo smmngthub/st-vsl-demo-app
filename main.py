@@ -81,7 +81,7 @@ creatUser = st.Page("admin/createUsers.py", title="Create Users", icon=":materia
 
 #test_form = st.Page("RandD/randd_1.py", title="Sqlite3", icon=":material/rule_settings:")
 #test_child_table = st.Page("RandD/forrm_with_child_table.py", title="Form Child Table", icon=":material/foot_bones:")
-#img_related = st.Page("RandD/img_related.py", title="Image Related", icon=":material/eyeglasses:")
+photo_upload = st.Page("RandD/img_related.py", title="Photo Upload", icon=":material/add_a_photo:")
 
 vessels = st.Page("Vessels/Vessels.py", title="Vessels", icon=":material/houseboat:")
 vessel_reports = st.Page("Vessels/Vessel_Reports.py", title="Vessel Reports", icon=":material/tsunami:")
@@ -96,7 +96,7 @@ if st.session_state.logged_in:
             "Vessels": [vessels, vessel_reports],
             "Inspection & Survey": [inspection, surveys],
             "Reports": [dashboard, alerts],
-            "Tools": [search, history],
+            "Tools": [search, phot_upload, history],
             # "RandD": [test_form, test_child_table, img_related],
         }
     )
