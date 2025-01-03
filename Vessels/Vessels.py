@@ -63,7 +63,9 @@ def add_new_vessel():
   
   return None
 
-
+def list_existing_vessel():
+  pass
+  
 user_action = st.radio("Action", ["New Vessel", "Existing", "Amendment", "TAB Format"], horizontal=True)
 # st.write("User Action is ", user_action) 
 if user_action == "New Vessel":
