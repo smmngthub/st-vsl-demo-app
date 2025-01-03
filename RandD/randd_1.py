@@ -9,7 +9,8 @@ import time
 import sqlite3  # to store the information in the local database
 conn = sqlite3.connect('testdb.db', check_same_thread=False)
 cur = conn.cursor()
-st.write(" Connection :", conn, " Cur: " , cur)
+# st.write(" Connection :", conn) 
+st.write(" Cur: " , cur)
 st.title("You are in RANDD_1.py page")
 # st.title (":balloon:")
 st.snow()
@@ -85,14 +86,14 @@ with tab1:
   test_form()
   # pass
 with tab2:
-  if len(df) > 0:
-    st.dataframe(df)
+  # if len(df) > 0:
+  st.dataframe(df)
   pass
 with tab3:
-  if len(df) > 0:
-    st.write(" All Info", df)
+  #if len(df) > 0:
+  st.write(" All Info", df)
 with tab4:
-  if len(df) > 0:
-    st.dataframe(df)
+  #if len(df) > 0:
+  st.dataframe(df)
 
 
