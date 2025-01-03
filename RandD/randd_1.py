@@ -19,8 +19,8 @@ def test_form():
   st.subheader(" This is a TEST Form for SQLite3")
   with st.form(key="Test Info Form"):
     # Collect the basic information
-    name = st.text_input(label="First Name:" )
-    age = st.number_input("You Age", value=None, step=1, placeholder="Type a number...")
+    name = st.text_input(label="First Name:", value="" )
+    age = st.number_input("You Age", value=25, step=1, placeholder="Type a number...")
     dob = st.date_input("When's your birthday", value=None)
 
     btn_submit = st.form_submit_button(label="Submit")
