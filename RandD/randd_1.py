@@ -34,8 +34,8 @@ def add_test_data(a, b, c):
   conn.commit()
   st.info("Inside add_test_data - Before CLOSE")
 
-  conn.close()
-  st.success("You have successfully submitted the details. Thank you!")
+  #conn.close()
+  #st.success("You have successfully submitted the details. Thank you!")
   st.balloons()  
 # Calling the form 
 def fetch_tst_data():
@@ -43,6 +43,8 @@ def fetch_tst_data():
   cur.execute("SELECT * from tst_table")
   all_info = cur.fetchall()
   st.write(" All Info", all_info)   
+  conn.commit()
+  st.info("Inside add_test_data - Before CLOSE")
 
 test_form()
 fetch_tst_data()
