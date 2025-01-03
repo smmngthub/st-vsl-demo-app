@@ -65,6 +65,7 @@ def fetch_tst_data():
     cur.execute("SELECT * from tst_table")
     all_info = cur.fetchall()
     conn.commit()
+    conn.close()
     st.toast("Fetching ALL data!", icon='🎉') 
     return all_info
   except Exception as e:
