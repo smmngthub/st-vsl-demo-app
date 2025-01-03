@@ -14,14 +14,15 @@ def logout():
         st.rerun()
 
 login_page = st.Page(login, title="Log in", icon=":material/login:")
+
 logout_page = st.Page(logout, title="Log out", icon=":material/logout:")
 
 dashboard = st.Page(
-    "reports/dashboard.py", title="Dashboard", icon=":material/dashboard:", default=True
+    "reports/dashboard.py", title="Dashboard", default=True
 )
-bugs = st.Page("reports/bugs.py", title="Bug reports", icon=":material/bug_report:")
+bugs = st.Page("reports/bugs.py", title="Bug reports")
 alerts = st.Page(
-    "reports/alerts.py", title="System alerts", icon=":material/notification_important:"
+    "reports/alerts.py", title="System alerts"
 )
 
 search = st.Page("tools/search.py", title="Search", icon=":material/search:")
