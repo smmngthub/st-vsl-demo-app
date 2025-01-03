@@ -26,6 +26,11 @@ def test_form():
 
     btn_submit = st.form_submit_button(label="Submit")
     if btn_submit:
+      # Validate the Input
+      if age <18 or age > 120:
+        st.error(f" You entered the age as {age}. Please enter a number between 18 and 120.")
+        st.stop()
+        
       st.toast("Information is being SUBMITTED...")
       time.sleep(.5)
       # st.info("You are inside SUBIT Button")
@@ -69,15 +74,19 @@ with list_col:
   # st.dataframe(df)
   if st.button("Alert Me!"):
     pass
-    #send_alert("This is an ALERT Message")  
+    #send_alert("This is an ALERT Message")  # This is not working as the from ... import send_alert is NOT working
   #pass
-tab1, tab2, tab3 = st.tabs(["Entry", "🗃 Listing", "Selection"])
+tab1, tab2, tab3, tab4 = st.tabs(["Add Entry", "🗃 View Info (Table)", "View Info (Tree)", "Delete Info"])
 
 with tab1:
   test_form()
-  pass
+  # pass
 with tab2:
-  st.write(" All Info", df) 
-with tab3:
   st.dataframe(df)
+  pass
+with tab3:
+  st.write(" All Info", df)
+with tab4:
+  st.dataframe(df)
+
 
