@@ -31,6 +31,6 @@ if image_file is not None:
 
   # st.video(video_bytes)
 
-  VIDEO_URL = "https://example.com/not-youtube.mp4"
-  st.video(VIDEO_URL, subtitles="subtitles.vtt")
+  # VIDEO_URL = "https://example.com/not-youtube.mp4"
+  # st.video(VIDEO_URL, subtitles="subtitles.vtt")
 
