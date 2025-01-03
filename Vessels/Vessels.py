@@ -6,11 +6,11 @@ st.title(":green[Add Vessel]")
 
 # New Vessels & List of Existing Vessels
 
-New Vessel
-New Vessel, Existing Vessels, Amendments = st.tabs(["New", "Existing", "Amendment"])\
-with New Vessel:
+
+NewVessel, ExistingVessels, Amendments = st.tabs(["New", "Existing", "Amendment"])\
+with NewVessel:
   pass
-with Existing Vessels:
+with ExistingVessels:
   pass
 with Amendments:
   pass
