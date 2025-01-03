@@ -13,10 +13,10 @@ def add_new_vessel():
   col_left, col_right = st.columns([1, 1])
 
   with col_left:
-    Vessel_Number = st.text_input("Vessel Number")
-    Vessel_Name = st.text_input("Vessel Name")
-    Vessel_Category = st.text_input("Vessel Category")
-    Registration_Number = st.text_input("Registration Number")
+    Vessel_Number = st.text_input("*Vessel Number")
+    Vessel_Name = st.text_input("*Vessel Name")
+    Vessel_Category = st.text_input("*Vessel Category")
+    Registration_Number = st.text_input("*Registration Number")
     Model = st.text_input("Model")
     Nautical_Reading = st.text_input("Nautical Reading")
     Nautical_Miles = st.text_input("Nautical Miles")
@@ -57,7 +57,7 @@ def add_new_vessel():
       
 
   if st.button("Add Vessel"):
-    st.success("You have successfully added the new vessel {Vessel_Name}")
+    st.success(f"You have successfully added the new vessel {Vessel_Name}")
     st.balloons()
     time.sleep(1)
   
