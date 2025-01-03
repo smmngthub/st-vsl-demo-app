@@ -25,3 +25,8 @@ if image_file is not None:
   
   st.write(file_details)
   st.success("File Saved")
+
+  video_file = open("myvideo.mp4", "rb")
+  video_bytes = video_file.read()
+
+  st.video(video_bytes)
