@@ -73,6 +73,19 @@ def fetch_tst_data():
   # return None
   # st.info("Inside fetcg_tst_data - Before CLOSE")
 
+def delete_tst_data():
+  try:
+    conn = sqlite3.connect('testdb.db')
+    cur = conn.cursor()
+    cur.execute("DELETE from tst_table")
+    all_info = cur.fetchall()
+    conn.commit()
+    conn.close()
+    st.toast("DELET ing ALL data!", icon='🎉') 
+    # pass
+  except Exception as e:
+    st.error(f" There is a major problem with the deletion of data ::>>{e}")
+  # pass
 
 # df = fetch_tst_data()
 
@@ -80,14 +93,15 @@ form_col, list_col = st.columns([4,1])
 with form_col:
   #st.write(" All Info", df) 
   if st.button("Delete All"):
-    pass
+    delete_tst_all()
+    # pass
 with list_col:
   # st.dataframe(df)
   if st.button("Alert Me!"):
     pass
     #send_alert("This is an ALERT Message")  # This is not working as the from ... import send_alert is NOT working
   #pass
-tab1, tab2, tab3, tab4 = st.tabs(["Add Entry", "🗃 View Info (Table)", "View Info (Tree)", "Delete Info"])
+tab1, tab2, tab3, tab4, tab5 = st.tabs(["Add Entry", "🗃 View Info (Table)", "View Info (Tree)", "Delete Info", "AgGrid"])
 
 with tab1:
   test_form()
@@ -104,7 +118,9 @@ with tab3:
   st.write(" All Info", df)
 with tab4:
   #if len(df) > 0:
-  df = fetch_tst_data()
+  df = pd.Dataframe(fetch_tst_data())
   st.dataframe(df)
-
+with tab5:
+  pass
+  
 
