@@ -50,7 +50,7 @@ def add_new_vessel():
     st.balloons()
     time.sleep(1)
   
-  return true
+  return None
 
 NewVessel, ExistingVessels, Amendments = st.tabs(["New", "Existing", "Amendment"])
 with NewVessel:
