@@ -11,7 +11,7 @@ st.toast("Welcome to the R & D World")
 
 # Create a Form
 def test_form():
-  st.subtitle(" This is a TEST Form for SQLite3")
+  st.subheader(" This is a TEST Form for SQLite3")
   with st.form(key="Test Info Form"):
     # Collect the basic information
     name = st.text_input(label="First Name:" )
