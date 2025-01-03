@@ -91,7 +91,7 @@ tab1, tab2, tab3, tab4 = st.tabs(["Add Entry", "🗃 View Info (Table)", "View I
 
 with tab1:
   test_form()
-  st.rerun()
+  # st.rerun()
   # pass
 with tab2:
   # if len(df) > 0:
