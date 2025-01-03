@@ -9,7 +9,7 @@ import time
 import sqlite3  # to store the information in the local database
 conn = sqlite3.connect('testdb.db', check_same_thread=False)
 cur = conn.cursor()
-
+st.write(" Connection :", conn, " Cur: " , cur)
 st.title("You are in RANDD_1.py page")
 # st.title (":balloon:")
 st.snow()
@@ -56,12 +56,15 @@ def add_test_data(a, b, c):
 def fetch_tst_data():
   st.toast("Fetching data...")
   time.sleep(.5)
-  cur.execute("SELECT * from tst_table")
-  all_info = cur.fetchall()
-
-  conn.commit()
-  st.toast("Fetching ALL data!", icon='🎉') 
-  return all_info
+  try:
+    cur.execute("SELECT * from tst_table")
+    all_info = cur.fetchall()
+    conn.commit()
+    st.toast("Fetching ALL data!", icon='🎉') 
+    return all_info
+  except Exception as e:
+    st.error(f" There is a major problem with the ")
+  return None
   # st.info("Inside fetcg_tst_data - Before CLOSE")
 
 
@@ -82,11 +85,14 @@ with tab1:
   test_form()
   # pass
 with tab2:
-  st.dataframe(df)
+  if len(df) > 0:
+    st.dataframe(df)
   pass
 with tab3:
-  st.write(" All Info", df)
+  if len(df) > 0:
+    st.write(" All Info", df)
 with tab4:
-  st.dataframe(df)
+  if len(df) > 0:
+    st.dataframe(df)
 
 
