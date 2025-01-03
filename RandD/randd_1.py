@@ -50,7 +50,7 @@ def add_test_data(a, b, c):
   time.sleep(.5)
 
   conn.commit()
-  #conn.close() # Not Closing it here are we need the connection later to retrieve the data
+  conn.close() # Not Closing it here are we need the connection later to retrieve the data
   #st.success("You have successfully submitted the details. Thank you!")
   st.balloons()  
 # Calling the form 
@@ -58,6 +58,8 @@ def fetch_tst_data():
   st.toast("Fetching data...")
   time.sleep(.5)
   try:
+    conn = sqlite3.connect('testdb.db', check_same_thread=False)
+    cur = conn.cursor(
     cur.execute("SELECT * from tst_table")
     all_info = cur.fetchall()
     conn.commit()
