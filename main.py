@@ -74,8 +74,8 @@ creatUser = st.Page("admin/createUsers.py", title="Create Users", icon=":materia
 vessels = st.Page("Vessels/Vessels.py", title="Vessels", icon=":material/houseboat:")
 vessel_reports = st.Page("Vessels/Vessel_Reports.py", title="Vessel Reports", icon=":material/tsunami:")
 
-inspection = = st.Page("Inspection & Survey/Inspection Forms.py", title="Inspection Forms", icon=":material/sailing:")
-surveys = = st.Page("Inspection & Survey/Inspection Report.py", title="Inspection Reports", icon=":material/surfing:")
+inspection = st.Page("Inspection & Survey/Inspection Forms.py", title="Inspection Forms", icon=":material/sailing:")
+surveys = st.Page("Inspection & Survey/Inspection Report.py", title="Inspection Reports", icon=":material/surfing:")
 
 if st.session_state.logged_in:
     pg = st.navigation(
