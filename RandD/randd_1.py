@@ -144,7 +144,7 @@ with tab4:
   df = pd.DataFrame(fetch_tst_data())
   st.dataframe(df)
 with tab5:
-  df = fetch_tst_data()
+  df = pd.DataFrame(fetch_tst_data())
   selected = dataframe_selected(df)
   st.dataframe(selected)
   
