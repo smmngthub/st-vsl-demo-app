@@ -16,10 +16,11 @@ if image_file is not None:
                  "File Type": image_file.type,
                  "File Size": image_file.size,
                  "File ID": image_file.file_id}
-  st.write(file_details)
+ 
   img = load_image(image_file)
   st.image(img, use_container_width=150)
 
   with open(os.path.join("images", image_file.name), "wb") as f:
     f.write(image_file.getbuffer())
+   st.write(file_details)
   st.success("File Saved")
