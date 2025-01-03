@@ -22,4 +22,4 @@ if image_file is not None:
 
   with open(os.path.join("images", image_file.name), "wb") as f:
     f.write(image_file.getbuffer())
-  st.success("file Saved")
+  st.success("File Saved")
