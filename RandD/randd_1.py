@@ -68,7 +68,8 @@ with form_col:
 with list_col:
   # st.dataframe(df)
   if st.button("Alert Me!"):
-    send_alert("This is an ALERT Message")  
+    pass
+    #send_alert("This is an ALERT Message")  
   #pass
 tab1, tab2, tab3 = st.tabs(["Entry", "🗃 Listing", "Selection"])
 
