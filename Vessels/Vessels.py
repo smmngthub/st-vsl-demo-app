@@ -13,10 +13,10 @@ def add_new_vessel():
   col_left, col_right = st.columns([1, 1])
 
   with col_left:
-    Vessel_Number = st.text_input("*Vessel Number")
-    Vessel_Name = st.text_input("*Vessel Name")
-    Vessel_Category = st.text_input("*Vessel Category")
-    Registration_Number = st.text_input("*Registration Number")
+    Vessel_Number = st.text_input(":red[*Vessel Number]")
+    Vessel_Name = st.text_input(":red[*Vessel Name]")
+    Vessel_Category = st.text_input(":red[*Vessel Category]")
+    Registration_Number = st.text_input(":red[*Registration Number]")
     Model = st.text_input("Model")
     Nautical_Reading = st.text_input("Nautical Reading")
     Nautical_Miles = st.text_input("Nautical Miles")
