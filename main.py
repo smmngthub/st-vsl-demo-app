@@ -2,7 +2,7 @@
 import streamlit as st
 import time
 
-st.logo("logo/sample_logo_image.jpg")
+st.logo("logo/sample_logo_image.jpg", icon_image="logo/sample_logo_image_1.jpg")
 
 if "logged_in" not in st.session_state:
     st.session_state.logged_in = False
