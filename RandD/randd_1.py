@@ -98,7 +98,7 @@ form_col, list_col = st.columns([4,1])
 with form_col:
   #st.write(" All Info", df) 
   if st.button("Delete All"):
-    delete_tst_all()
+    delete_tst_data()
     # pass
 with list_col:
   # st.dataframe(df)
