@@ -30,3 +30,7 @@ if image_file is not None:
   video_bytes = video_file.read()
 
   st.video(video_bytes)
+
+  VIDEO_URL = "https://example.com/not-youtube.mp4"
+  st.video(VIDEO_URL, subtitles="subtitles.vtt")
+
