@@ -69,7 +69,7 @@ if st.session_state.logged_in:
 else:
     pg = st.navigation([login_page])
 
-pg.run()
+pg.run() 
 
 
 
