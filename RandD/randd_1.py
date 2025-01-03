@@ -118,7 +118,7 @@ with tab3:
   st.write(" All Info", df)
 with tab4:
   #if len(df) > 0:
-  df = pd.Dataframe(fetch_tst_data())
+  df = pd.DataFrame(fetch_tst_data())
   st.dataframe(df)
 with tab5:
   pass
