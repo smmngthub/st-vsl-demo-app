@@ -18,11 +18,11 @@ login_page = st.Page(login, title="Log in", icon=":material/login:")
 logout_page = st.Page(logout, title="Log out", icon=":material/logout:")
 
 dashboard = st.Page(
-    "reports/dashboard.py", title="Dashboard", default=True
+    "reports/dashboard.py", title="Dashboard", icon=":material/dashboard:", default=True
 )
-bugs = st.Page("reports/bugs.py", title="Bug reports")
+bugs = st.Page("reports/bugs.py", title="Bug reports", icon=":material/bug_report:")
 alerts = st.Page(
-    "reports/alerts.py", title="System alerts"
+    "reports/alerts.py", title="System alerts", icon=":material/notification_important:"
 )
 
 search = st.Page("tools/search.py", title="Search", icon=":material/search:")
