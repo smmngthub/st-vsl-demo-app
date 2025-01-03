@@ -67,12 +67,12 @@ history = st.Page("tools/history.py", title="History", icon=":material/history:"
 
 creatUser = st.Page("admin/createUsers.py", title="Create Users", icon=":material/man:")
 
-test_form = st.Page("RandD/randd_1.py", title="Sqlite3", icon=":material/rule_settings:")
-test_child_table = st.Page("RandD/forrm_with_child_table.py", title="Form Child Table", icon=":material/foot_bones:")
-img_related = st.Page("RandD/img_related.py", title="Image Related", icon=":material/eyeglasses:")
+#test_form = st.Page("RandD/randd_1.py", title="Sqlite3", icon=":material/rule_settings:")
+#test_child_table = st.Page("RandD/forrm_with_child_table.py", title="Form Child Table", icon=":material/foot_bones:")
+#img_related = st.Page("RandD/img_related.py", title="Image Related", icon=":material/eyeglasses:")
 
-vessels = st.Page("Vessels/Vessels.py", title="Vessels", icon=":material/:houseboat")
-# vessel_reports = st.Page("Vessels/Vessel_Reports.py", title="Vessel Reports", icon=":material/tsunami:")
+vessels = st.Page("Vessels/Vessels.py", title="Vessels", icon=":material/houseboat:")
+vessel_reports = st.Page("Vessels/Vessel_Reports.py", title="Vessel Reports", icon=":material/tsunami:")
 
 
 
