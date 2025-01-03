@@ -14,7 +14,7 @@ import sqlite3  # to store the information in the local database
 # st.title("You are in RANDD_1.py page")
 # st.title (":balloon:")
 st.snow()
-st.toast("Welcome to the R & D World")
+# st.toast("Welcome to the R & D World")
 
 # Create a Form
 def test_form():
@@ -31,11 +31,11 @@ def test_form():
       if age <18 or age > 120:
         st.error(f" You entered the age as {age}. Please enter a number between 18 and 120.")
         st.stop()
-        
-      st.toast("Information is being SUBMITTED...")
-      time.sleep(.5)
-      # st.info("You are inside SUBIT Button")
-      add_test_data(name, age, dob)  
+      else:  
+        st.toast("Information is being SUBMITTED...")
+        time.sleep(.5)
+        # st.info("You are inside SUBIT Button")
+        add_test_data(name, age, dob)  
 
 def add_test_data(a, b, c):
   st.toast("CREAT ing TABLE...")
@@ -95,7 +95,7 @@ with tab1:
 with tab2:
   # if len(df) > 0:
   st.dataframe(df)
-  pass
+  #pass
 with tab3:
   #if len(df) > 0:
   st.write(" All Info", df)
