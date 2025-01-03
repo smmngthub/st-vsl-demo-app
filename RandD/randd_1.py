@@ -34,7 +34,7 @@ def add_test_data(a, b, c):
   cur.execute("""CREATE TABLE IF NOT EXISTS tst_table(NAME TEXT(50), AGE TEXT(50), DOB TEXT(20));""")
   # st.info("Inside add_test_data - Before INSERT")
   st.toast("CREATING TABLE...")
-  time.sleept(.5)
+  time.sleep(.5)
 
   cur.execute("INSERT INTO tst_table VALUES (?, ?, ?)", (a, b, c))
   # st.info("Inside add_test_data - Before COMMIT")
