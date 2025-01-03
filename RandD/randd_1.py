@@ -40,7 +40,7 @@ def test_form():
 def add_test_data(a, b, c):
   st.toast("CREAT ing TABLE...")
   time.sleep(.5)
-  conn = sqlite3.connect('testdb.db', check_same_thread=False)
+  conn = sqlite3.connect('testdb.db')
   cur = conn.cursor()
   cur.execute("""CREATE TABLE IF NOT EXISTS tst_table(NAME TEXT(50), AGE TEXT(50), DOB TEXT(20));""")
   st.toast("INSERT ing to TABLE...")
@@ -60,7 +60,7 @@ def fetch_tst_data():
   st.toast("Fetching data...")
   time.sleep(.5)
   try:
-    conn = sqlite3.connect('testdb.db', check_same_thread=False)
+    conn = sqlite3.connect('testdb.db')
     cur = conn.cursor(
     cur.execute("SELECT * from tst_table")
     all_info = cur.fetchall()
