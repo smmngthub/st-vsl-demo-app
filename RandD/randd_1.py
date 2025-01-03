@@ -117,7 +117,7 @@ def dataframe_selected(df):
     column_config={
       "Action": st.column_config.CheckboxColumn(required=True)
     },
-    disabled=df.columns,
+    #disabled=df.columns,
   )
   
   selected_rows = edited_df[edited_df.Action]
