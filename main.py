@@ -72,7 +72,7 @@ test_child_table = st.Page("RandD/forrm_with_child_table.py", title="Form Child 
 img_related = st.Page("RandD/img_related.py", title="Image Related", icon=":material/eyeglasses:")
 
 vessels = st.Page("Vessels/Vessels.py", title="Vessels", icon=":material/:houseboat")
-vessel_reports = st.Page("Vessels/Vessel_Reports.py", title="Vessel Reports", icon=":material/tsunami:")
+# vessel_reports = st.Page("Vessels/Vessel_Reports.py", title="Vessel Reports", icon=":material/tsunami:")
 
 
 
@@ -80,7 +80,7 @@ if st.session_state.logged_in:
     pg = st.navigation(
         {
             "Account": [logout_page, creatUser],
-            "Vessels": [vessles, vessel_reports],
+            "Vessels": [vessles],
             "Reports": [dashboard, bugs, alerts],
             "Tools": [search, history],
             # "RandD": [test_form, test_child_table, img_related],
