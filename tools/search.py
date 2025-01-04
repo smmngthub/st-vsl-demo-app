@@ -7,7 +7,8 @@ def load_data(data):
 
 st.title("Adavance Search Section")
 
-world = load_data("data_files/Vessels.csv")
+vessels = load_data("data_files/Vessels.csv")
 
-
+with st.expander("Vessels View"):
+  st.dataframe(vessels)
 
