@@ -24,6 +24,7 @@ if image_file is not None:
     f.write(image_file.getbuffer())
   
   st.write(file_details)
+  st.download_button("Download Image", data=image_file, file_name='ZZZ_download.png', mime='image/png')
   st.success("File Saved")
 
   # video_file = open("myvideo.mp4", "rb")
