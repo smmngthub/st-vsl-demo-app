@@ -130,12 +130,16 @@ def add_new_vessel():
 def list_existing_vessel():
   all_vessels = fetch_vessel_data()
   st.dataframe(all_vessels)
-  st.write("Amendments")
-  pass
+  # st.write("Amendments")
+  #pass
   
 user_action = st.radio("Action", ["New Vessel", "Existing", "Amendment", "TAB Format"], horizontal=True)
 # st.write("User Action is ", user_action) 
 st.divider()
+if st.button("Delete All"):
+  # call javascript popup to get confirmation from the user. If yes, proceed
+  delete_vessel_data()
+  st.toast("Sorry to see the Vessel LEAVVING...")
 
 if user_action == "New Vessel":
   # st.write("New Vessel ", user_action)
