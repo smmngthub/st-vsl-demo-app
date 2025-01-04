@@ -26,5 +26,6 @@ def collect_form_details():
   save = st.button("Save")
   if save:
     st.success(" Successfully submitted the information")
+    st.snow()
 
 collect_form_details()
