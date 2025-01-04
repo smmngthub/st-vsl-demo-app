@@ -20,7 +20,7 @@ def inspection_summary():
   maint_reqd = st.radio("Maintenance Required:", ["Yes", "No"])
   vsl_status = st.selectbox("Vessel Status :",  ("Available", "In Maintenance", "Maintenance Required", "Breakdown", "Discontinue")) 
   maint_priority = st.selectbox("Maintenance Priority :", ("Low", "Medium", "High", "Emergency"))
-  additional_note = st.text_are("Additional Note")
+  additional_note = st.text_area("Additional Note")
 
   pass
   
