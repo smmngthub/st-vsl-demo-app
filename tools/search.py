@@ -3,7 +3,7 @@ import streamlit as st
 import pandas as pd
 
 def load_data(data):
-  pd.read_csv(data)
+  return pd.read_csv(data)
 
 st.title("Adavance Search Section")
 
