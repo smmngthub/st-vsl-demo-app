@@ -138,9 +138,10 @@ user_action = st.radio("Action", ["New Vessel", "Existing", "Amendment", "TAB Fo
 st.divider()
 if st.button("Delete All"):
   # call javascript popup to get confirmation from the user. If yes, proceed
-  delete_vessel_data()
-  st.toast("Sorry to see the Vessel LEAVVING...")
-
+  # delete_vessel_data()
+  # st.toast("Sorry to see the Vessel LEAVVING...")
+  pass
+  
 if user_action == "New Vessel":
   # st.write("New Vessel ", user_action)
   add_new_vessel()
