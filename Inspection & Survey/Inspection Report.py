@@ -15,7 +15,7 @@ def do_inspection():
 def inspection_summary():
   # screen fields
 
-  with st.container(key="ins_summary"):  
+  with st.container(key="ins_summary", border=True):  
   # Overall Condition : DD List (Excellant Condition, Good Condition, A little wear, 
     safe_to_use = st.radio("Vessel Safe to Use", ["Yes", "No"]) 
     maint_reqd = st.radio("Maintenance Required:", ["Yes", "No"])
@@ -47,7 +47,9 @@ if (next):
   inspection_summary()
 
   submit = st.button("Submit")
-  st.success("You have successfully the information")
+  if submit:
+    st.success("You have successfully the information")
+    st.balloons()
   
 # 1. Inspection Info
 # 2. Do Inspection
