@@ -18,8 +18,8 @@ def inspection_summary():
   # Overall Condition : DD List (Excellant Condition, Good Condition, A little wear, 
   safe_to_use = st.radio("Vessel Safe to Use", ["Yes", "No"]) 
   maint_reqd = st.radio("Maintenance Required:", ["Yes", "No"])
-  vsl_status = st.select("Vessel Status :",  ("Availanble", "In Maintenance", "Maintenance Required", "Breakdown", "Discontinue")) 
-  maint_priority = st.select("Maintenance Priority :", ("Low", "Medium", "High", "Emergency"))
+  vsl_status = st.selectbox("Vessel Status :",  ("Available", "In Maintenance", "Maintenance Required", "Breakdown", "Discontinue")) 
+  maint_priority = st.selectbox("Maintenance Priority :", ("Low", "Medium", "High", "Emergency"))
   additional_note = st.text_are("Additional Note")
 
   pass
