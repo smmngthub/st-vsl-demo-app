@@ -12,7 +12,7 @@ st.markdown(title_format, unsafe_allow_html=True)
 # st.subheader("This is a subheader with a divider", divider="gray")
 # st.subheader("These subheaders have rotating dividers", divider=True)
 
-st.subheader("                     _Add Inspection Item_ :blue[cool] :sunglasses:", divider=True)
+st.subheader("Add :blue[Inspection] Item :sunglasses:", divider=True)
 
 def collect_form_details():
   # st.write("Add Inspection Item")
