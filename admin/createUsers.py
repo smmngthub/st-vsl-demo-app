@@ -20,25 +20,26 @@ def create_new_users():
 
 container = st.container(border=True)
 
-user_action = st.radio("Action", ["New User", "Existing"], horizontal=True)
-if user_action == "New User":
-  # call the form to enter the New Users
-  create_new_users()
-  on = st.toggle("Take Picture")
-  if on:
-    pic_type = st.radio("Pic Mode", ["Upload", "Camera"], horizontal=True)
-    # st.write("Picture Type: ", pic_type)
-    if pic_type == "Upload":
-      uploaded_photo = st.file_uploader("Upload a Photo", type=["png", "jpeg", "jpg"])
-      with st.expander ("Show my Pic"):
-        if uploaded_photo is not None:
-          st.image(uploaded_photo)
-      #pass
-    elif pic_type == "Camera":
-      camera_photo = st.camera_input("Take a Photo")
-      with st.expander ("Show my Pic"):
-        if camera_photo is not None:
-          st.image(camera_photo)
+with st.container(height=300):
+  user_action = st.radio("Action", ["New User", "Existing"], horizontal=True)
+  if user_action == "New User":
+    # call the form to enter the New Users
+    create_new_users()
+    on = st.toggle("Take Picture")
+    if on:
+      pic_type = st.radio("Pic Mode", ["Upload", "Camera"], horizontal=True)
+      # st.write("Picture Type: ", pic_type)
+      if pic_type == "Upload":
+        uploaded_photo = st.file_uploader("Upload a Photo", type=["png", "jpeg", "jpg"])
+        with st.expander ("Show my Pic"):
+          if uploaded_photo is not None:
+            st.image(uploaded_photo)
+        #pass
+      elif pic_type == "Camera":
+        camera_photo = st.camera_input("Take a Photo")
+        with st.expander ("Show my Pic"):
+          if camera_photo is not None:
+            st.image(camera_photo)
         # st.write(" Hi Camera Photo")
       #pass
     # toggle_and_pic()
