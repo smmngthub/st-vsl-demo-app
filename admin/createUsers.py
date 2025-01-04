@@ -9,7 +9,7 @@ def create_new_users():
   user_name = st.text_input("User Name")
   st.write("User Name", user_name)
   pwd = st.text_input("Your Password 👉", type="password", placeholder="Please enter your password")
-  # re-pwd = st.text_input("Re-Enter Password 👉", type="password", placeholder="Please re-enter your password")
+  re-pwd = st.text_input("Re-Enter Password 👉", type="password", placeholder="Please re-enter your password")
   btn_register = st.button("Register")
   
   return True
