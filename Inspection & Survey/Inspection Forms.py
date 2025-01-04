@@ -8,7 +8,7 @@ def collect_form_details():
   st.write("Add Inspection Item")
 
   inspect_item = st.text_input("Inspection Item")
-  # rad_type = st.radio("Type", ("Good-Repair-Replace-NA", "Yes-No-NA", "Text Field", "Number", "Pass-Fail-NA", "Ok-Fault-NA")
+  rad_type = st.radio("Type", ["Good-Repair-Replace-NA", "Yes-No-NA", "Text Field", "Number", "Pass-Fail-NA", "Ok-Fault-NA"])
   reqd = st.checkbox("Required")
   instruction = st.text_area("Instructions")
   
