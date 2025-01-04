@@ -28,13 +28,15 @@ if user_action == "New User":
     # st.write("Picture Type: ", pic_type)
     if pic_type == "Upload":
       uploaded_photo = st.file_uploader("Upload a Photo", type=["png", "jpeg", "jpg"])
-      if uploaded_photo is not None:
-        st.image(uploaded_photo)
+      with st.expander ("Show my Pic"):
+        if uploaded_photo is not None:
+          st.image(uploaded_photo)
       #pass
     elif pic_type == "Camera":
       camera_photo = st.camera_input("Take a Photo")
-      if camera_photo is not None:
-        st.image(camera_photo)
+      with st.expander ("Show my Pic"):
+        if camera_photo is not None:
+          st.image(camera_photo)
         # st.write(" Hi Camera Photo")
       #pass
     # toggle_and_pic()
