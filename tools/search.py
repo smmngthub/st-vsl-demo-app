@@ -7,7 +7,7 @@ def load_data(data):
 
 st.title("Adavance Search Section")
 
-# world = load_data("data_files/Vessels.csv")
+world = load_data("data_files/Vessels.csv")
 
 
 
