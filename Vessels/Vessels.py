@@ -77,6 +77,7 @@ def add_new_vessel():
 
   with col_left:
     with st.container(height=600):
+      st.write("Mandatory Details")
       Vessel_Number = st.text_input(":red[*Vessel Number]")
       Vessel_Name = st.text_input(":red[*Vessel Name]")
       Vessel_Category = st.text_input(":red[*Vessel Category]")
@@ -123,7 +124,7 @@ def add_new_vessel():
     with st.container(height=100):
       Vessel_Image  = st.text_input("Vessel Image") # Upload Image 
 
-    with st.container(height=150):
+    with st.container(height=200):
       GPS_EnabledDevice_ID  = st.text_input("GPS EnabledDevice ID")
       GPS_Vessel_ID  = st.text_input("GPS Vessel ID")
   
