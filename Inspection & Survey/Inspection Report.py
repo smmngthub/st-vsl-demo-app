@@ -25,8 +25,8 @@ def inspection_summary():
   # Overall Condition : DD List (Excellant Condition, Good Condition, A little wear, 
     col1, col2 = st.columns(2)
     with col1: 
-      safe_to_use = st.radio("Vessel Safe to Use", ["Yes", "No"]. horizontal=True) 
-      maint_reqd = st.radio("Maintenance Required:", ["Yes", "No"]. horizontal=True)
+      safe_to_use = st.radio("Vessel Safe to Use", ["Yes", "No"], horizontal=True) 
+      maint_reqd = st.radio("Maintenance Required:", ["Yes", "No"], horizontal=True)
     with col2:
       vsl_status = st.selectbox("Vessel Status :",  ("Available", "In Maintenance", "Maintenance Required", "Breakdown", "Discontinue")) 
       maint_priority = st.selectbox("Maintenance Priority :", ("Low", "Medium", "High", "Emergency"))
