@@ -76,7 +76,7 @@ def add_new_vessel():
   col_left, col_right = st.columns([1, 1])
 
   with col_left:
-    with st.container(height=300):
+    with st.container(height=600):
       Vessel_Number = st.text_input(":red[*Vessel Number]")
       Vessel_Name = st.text_input(":red[*Vessel Name]")
       Vessel_Category = st.text_input(":red[*Vessel Category]")
@@ -85,17 +85,17 @@ def add_new_vessel():
       Nautical_Reading = st.text_input("Nautical Reading")
       Nautical_Miles = st.text_input("Nautical Miles")
 
-    with st.container(height=100):
+    with st.container(height=200):
       Status = st.selectbox("*Status", ("Available", "In Maintenance", "Maintenance Required")) # DD 
       Flag = st.text_input("Flag") # DD  -Country
       Port_of_Registry = st.text_input("Port of Registry")  
 
-    with st.container(height=100):
+    with st.container(height=300):
       SiteProject  = st.text_input("Site/Project")
       Business_Unit  = st.text_input("Business Unit")
       Vessel_Value  = st.text_input("Vessel Value")
 
-    with st.container(height=150):
+    with st.container(height=450):
       Purchase_Date  = st.date_input("Purchase Date")
       Warranty_Date  = st.date_input("Warranty Date")
       Required_Geo_Location_while_Inspection  = st.checkbox("Geo Location")
