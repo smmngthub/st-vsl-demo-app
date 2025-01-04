@@ -32,35 +32,37 @@ def inspection_summary():
       maint_priority = st.selectbox("Maintenance Priority :", ("Low", "Medium", "High", "Emergency"))
     additional_note = st.text_area("Additional Note")
   
-
-col1, col2 = st.columns(2)
-
-with col1:
-  with st.container(height=350):
-    report_no = st.text_input("Report #", value="", placeholder="")
-    marine = st.text_input("Marine")
-    location = st.text_input("Location")
-    inspector_name = st.text_input("Inspector Name")
-    select_inspection_form = st.text_input("Select Inspection Form")
-
-with col2:
-  with st.container(height=350):
-    vessel_number = st.text_input("Vessel Number")
-    vessel_name = st.text_input("Vessel Name")
-    registration_number = st.text_input("Registration Number")
-    nautical_reading = st.text_input("Nautical Reading")
-
-next = st.button("Next")
-if (next):
+def inspection_info():
   
-  inspection_summary()
-
-  submit = st.button("Submit")
-  if submit:
-    st.success("You have successfully the information")
-    st.balloons()
+  col1, col2 = st.columns(2)
+  
+  with col1:
+    with st.container(height=350):
+      report_no = st.text_input("Report #", value="", placeholder="")
+      marine = st.text_input("Marine")
+      location = st.text_input("Location")
+      inspector_name = st.text_input("Inspector Name")
+      select_inspection_form = st.text_input("Select Inspection Form")
+  
+  with col2:
+    with st.container(height=350):
+      vessel_number = st.text_input("Vessel Number")
+      vessel_name = st.text_input("Vessel Name")
+      registration_number = st.text_input("Registration Number")
+      nautical_reading = st.text_input("Nautical Reading")
+  
+  next = st.button("Next")
+  if (next):
+    
+    inspection_summary()
+  
+    submit = st.button("Submit")
+    if submit:
+      st.success("You have successfully the information")
+      st.balloons()
   
 # 1. Inspection Info
+inspection_info()
 # 2. Do Inspection
 # 3. Inspection Summary
 
