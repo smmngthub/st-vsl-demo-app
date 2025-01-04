@@ -2,11 +2,16 @@
 import streamlit as st
 
 st.title("You are in Inspection Report Page")
+# This is a 3 step process
+# 1. Inspection Info
+# 2. Do Inspection
+# 3. Inspection Summary
+
 
 col1, col2 = st.columns(2)
 
 with col1:
-  with st.container(height=300):
+  with st.container(height=350):
     report_no = st.text_input("Report #", value="", placeholder="")
     marine = st.text_input("Marine")
     location = st.text_input("Location")
@@ -14,7 +19,7 @@ with col1:
     select_inspection_form = st.text_input("Select Inspection Form")
 
 with col2:
-  with st.container(height=300):
+  with st.container(height=350):
     vessel_number = st.text_input("Vessel Number")
     vessel_name = st.text_input("Vessel Name")
     registration_number = st.text_input("Registration Number")
@@ -23,3 +28,26 @@ with col2:
 submit = st.button("Submit")
 if (submit):
   st.success("You have successfully the information")
+
+
+def do_inspection():
+  # screen field
+  
+  pass
+
+def inspection_summary():
+  # screen fields
+
+  # Overall Condition : DD List (Excellant Condition, Good Condition, A little wear, 
+  safe_to_use = st.checkbox("Vessel Safe to Use", value=("Yes", "No") 
+  # Maintenance Required: YesNo
+  # Vessel Status : DD List (Availanble, In Maintenance, Maintenance Required, Breakdown, Discontinue) 
+  #Maintenance Priority : DD List  (Low, Medium, High, Emergency)
+  #Additional Note (Text Area)
+
+  pass
+  
+# 1. Inspection Info
+# 2. Do Inspection
+# 3. Inspection Summary
+
