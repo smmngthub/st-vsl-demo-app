@@ -22,16 +22,20 @@ user_action = st.radio("Action", ["New User", "Existing"], horizontal=True)
 if user_action == "New User":
   # call the form to enter the New Users
   create_new_users()
+  on = st.toggle("Take Picture")
+  if on:
+    pic_type = st.radio("Pic Mode", ["Upload", "Camera"])
+    st.write("Picture Type: ", pic_type)
+    # toggle_and_pic()
   
   pass
 elif user_action == "Existing":
   pass
 
 
-# def toggle_and_text():
-#  cols = st.columns(2)
-#  cols[0].toggle("Toggle") 
-#  cols[1].text_area("Enter Text")
+def toggle_and_text():
+  cols = st.columns(2)
+  cols[0].toggle("Toggle") 
+  cols[1].text_area("Enter Text")
   # pass
   
-# toggle_and_text()
