@@ -10,5 +10,5 @@ st.title("Adavance Search Section")
 vessels = load_data("data_files/Vessels.csv")
 
 with st.expander("Vessels View"):
-  st.dataframe(vessels)
+  st.dataframe(vessels, hide_index=True)
 
