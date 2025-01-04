@@ -7,10 +7,14 @@ def create_new_users():
   # with st.form(key="user_creation")
   
   user_name = st.text_input("User Name")
-  # st.write("User Name", user_name)
   pwd = st.text_input("Your Password 👉", type="password", placeholder="Please enter your password", help="Password must contain special characters #@$")
   re_pwd = st.text_input("Re-Enter Password 👉", type="password", placeholder="Please re-enter your password", help="Password must contain special characters #@$")
+  
   btn_register = st.button("Register")
+  if btn_register:
+    st.success("You have successfully submitted your information")
+    st.balloons()
+    st.snow()
   
   return True
 
@@ -18,9 +22,7 @@ user_action = st.radio("Action", ["New User", "Existing"], horizontal=True)
 if user_action == "New User":
   # call the form to enter the New Users
   create_new_users()
-  st.success("You have successfully submitted your information")
-  st.balloons()
-  st.snow()
+  
   pass
 elif user_action == "Existing":
   pass
