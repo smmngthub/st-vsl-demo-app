@@ -148,19 +148,22 @@ def list_existing_vessel():
 user_action = st.radio("Action", ["New Vessel", "Existing", "Amendment", "TAB Format"], horizontal=True)
 # st.write("User Action is ", user_action) 
 st.divider()
-if st.button("Delete All"):
-  # call javascript popup to get confirmation from the user. If yes, proceed
-  delete_vessel_data()
-  # st.toast("Sorry to see the Vessel LEAVVING...")
-  pass 
+def delete_vessels():
+  if st.button("Delete All"):
+    # call javascript popup to get confirmation from the user. If yes, proceed
+    delete_vessel_data()
+    # st.toast("Sorry to see the Vessel LEAVVING...")
+
   
 if user_action == "New Vessel":
   # st.write("New Vessel ", user_action)
   add_new_vessel()
 elif user_action == "Existing":
   # st.write("Existing ", user_action)
+  delete_vessels()
   list_existing_vessel()
 elif user_action == "Amendment":
+  delete_vessels()
   # st.write("Amendment Vessel ", user_action)
   pass
 elif user_action == "TAB Format":
