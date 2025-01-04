@@ -2,6 +2,7 @@
 import streamlit as st
 import time
 import datetime
+import sqlite3
 
 st.title(":green[Add Vessel]")
 
