@@ -18,13 +18,14 @@ def create_new_users():
   
   return True
 
-container = st.container(border=True)
+# container = st.container(border=True)
 
-with st.container(height=300):
-  user_action = st.radio("Action", ["New User", "Existing"], horizontal=True)
-  if user_action == "New User":
-    # call the form to enter the New Users
-    create_new_users()
+user_action = st.radio("Action", ["New User", "Existing"], horizontal=True)
+if user_action == "New User":
+  # call the form to enter the New Users
+  create_new_users()
+  with st.container(height=300):
+
     on = st.toggle("Take Picture")
     if on:
       pic_type = st.radio("Pic Mode", ["Upload", "Camera"], horizontal=True)
