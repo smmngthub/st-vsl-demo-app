@@ -1,7 +1,13 @@
 #Bismillahirrahumanirrahim
 import streamlit as st
 
-st.title("You are in Inspection Report Page")
+# st.title("You are in Inspection Report Page")
+title_writing = "Inspection Report"
+title_format = f'<p style="text-align: center; font-family: ' \
+               f'Arial; color: #808080; font-size: 40px; ' \
+               f'font-weight: bold;">{title_writing}</p>'
+st.markdown(title_format, unsafe_allow_html=True)
+
 # This is a 3 step process
 # 1. Inspection Info
 # 2. Do Inspection
@@ -17,10 +23,13 @@ def inspection_summary():
 
   with st.container(key="ins_summary", border=True):  
   # Overall Condition : DD List (Excellant Condition, Good Condition, A little wear, 
-    safe_to_use = st.radio("Vessel Safe to Use", ["Yes", "No"]) 
-    maint_reqd = st.radio("Maintenance Required:", ["Yes", "No"])
-    vsl_status = st.selectbox("Vessel Status :",  ("Available", "In Maintenance", "Maintenance Required", "Breakdown", "Discontinue")) 
-    maint_priority = st.selectbox("Maintenance Priority :", ("Low", "Medium", "High", "Emergency"))
+    col1, col2 = st.columns(2)
+    with col1: 
+      safe_to_use = st.radio("Vessel Safe to Use", ["Yes", "No"]. horizontal=True) 
+      maint_reqd = st.radio("Maintenance Required:", ["Yes", "No"]. horizontal=True)
+    with col2:
+      vsl_status = st.selectbox("Vessel Status :",  ("Available", "In Maintenance", "Maintenance Required", "Breakdown", "Discontinue")) 
+      maint_priority = st.selectbox("Maintenance Priority :", ("Low", "Medium", "High", "Emergency"))
     additional_note = st.text_area("Additional Note")
   
 
