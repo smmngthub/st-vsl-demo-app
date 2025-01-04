@@ -6,8 +6,8 @@ def create_new_users():
 
   # with st.form(key="user_creation")
   
-  user_name = st.text_input("User Name")
-  pwd = st.text_input("Your Password 👉", type="password", placeholder="Please enter your password", help="Password must contain special characters #@$")
+  user_name = st.text_input("User Name 👇")
+  pwd = st.text_input("Your Password 👇", type="password", placeholder="Please enter your password", help="Password must contain special characters #@$")
   re_pwd = st.text_input("Re-Enter Password 👉", type="password", placeholder="Please re-enter your password", help="Password must contain special characters #@$")
   
   btn_register = st.button("Register")
