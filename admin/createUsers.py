@@ -25,9 +25,9 @@ if user_action == "New User":
   on = st.toggle("Take Picture")
   if on:
     pic_type = st.radio("Pic Mode", ["Upload", "Camera"], horizontal=True)
-    st.write("Picture Type: ", pic_type)
+    # st.write("Picture Type: ", pic_type)
     if pic_type == "Upload":
-      # uploaded_photo = st.file_uploader("Upload a Photo", type=["png", "jpeg", "jpg"])
+      uploaded_photo = st.file_uploader("Upload a Photo", type=["png", "jpeg", "jpg"])
       pass
     elif pic_type == "Camera":
       #camera_photo = st.camera_input("Take a Photo"")
