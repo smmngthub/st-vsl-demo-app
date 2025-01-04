@@ -15,6 +15,15 @@ st.markdown(title_format, unsafe_allow_html=True)
 
 def do_inspection():
   # screen field
+
+  df = pd.DataFrame(
+    {
+        "Inspection Item": [],
+        "Type": [],
+        "Required": [],
+        "Action": []
+    }
+  )
   
   pass
 
