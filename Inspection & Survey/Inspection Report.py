@@ -27,8 +27,8 @@ with col2:
 
 submit = st.button("Submit")
 if (submit):
-  st.success("You have successfully the information")
-
+  # st.success("You have successfully the information")
+  inspection_summary()
 
 def do_inspection():
   # screen field
