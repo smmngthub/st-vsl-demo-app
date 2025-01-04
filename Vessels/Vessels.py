@@ -14,7 +14,10 @@ def add_vessel_data(a, b, c, d, e, f, g, h):
   time.sleep(.5)
   conn = sqlite3.connect('vesseldb.db')
   cur = conn.cursor()
-  cur.execute("""CREATE TABLE IF NOT EXISTS vessel_table(VNAME TEXT(50), VAGE TEXT(50), VDOB TEXT(20));""")
+  cur.execute("""CREATE TABLE IF NOT EXISTS vessel_table(
+    Vessel_Number TEXT(50), Vessel_Name TEXT(50), Vessel_Category TEXT(50), Registration_Number TEXT(50), 
+    Model TEXT(50), Status TEXT(50), Flag TEXT(50), Port_of_Registry TEXT(50)
+    );""")
   st.toast("INSERT ing to TABLE...")
   time.sleep(.5)
 
@@ -116,6 +119,7 @@ def add_new_vessel():
       
 
   if st.button("Add Vessel"):
+    add_vessel_data(Vessel_Number, Vessel_Name, Vessel_Category, Registration_Number, Model, Status, Flag, Port_of_Registry)
     st.success(f"You have successfully added the new vessel {Vessel_Name}")
     st.balloons()
     time.sleep(1)
@@ -123,6 +127,8 @@ def add_new_vessel():
   return None
 
 def list_existing_vessel():
+  all_vessels = fetch_vessel_data()
+  st.dataframe(all_vessels)
   st.write("Amendments")
   pass
   
