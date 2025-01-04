@@ -18,6 +18,8 @@ def create_new_users():
   
   return True
 
+container = st.container(border=True)
+
 user_action = st.radio("Action", ["New User", "Existing"], horizontal=True)
 if user_action == "New User":
   # call the form to enter the New Users
