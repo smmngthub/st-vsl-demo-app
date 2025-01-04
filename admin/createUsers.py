@@ -41,6 +41,7 @@ if user_action == "New User":
         with st.expander ("Show my Pic"):
           if camera_photo is not None:
             st.image(camera_photo)
+            st.download_button("Download Image", data=camera_photo, file_name='ABC_download.png', mime='image/png')
         # st.write(" Hi Camera Photo")
       #pass
     # toggle_and_pic()
