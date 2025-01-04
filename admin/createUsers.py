@@ -24,7 +24,7 @@ user_action = st.radio("Action", ["New User", "Existing"], horizontal=True)
 if user_action == "New User":
   # call the form to enter the New Users
   create_new_users()
-  with st.container(height=300):
+  with st.container(height=600):
 
     on = st.toggle("Take Picture")
     if on:
