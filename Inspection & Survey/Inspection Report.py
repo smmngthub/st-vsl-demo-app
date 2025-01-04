@@ -7,6 +7,23 @@ st.title("You are in Inspection Report Page")
 # 2. Do Inspection
 # 3. Inspection Summary
 
+def do_inspection():
+  # screen field
+  
+  pass
+
+def inspection_summary():
+  # screen fields
+
+  # Overall Condition : DD List (Excellant Condition, Good Condition, A little wear, 
+  safe_to_use = st.radio("Vessel Safe to Use", ["Yes", "No"]) 
+  maint_reqd = st.radio("Maintenance Required:", ["Yes", "No"])
+  vsl_status = st.select("Vessel Status :",  ("Availanble", "In Maintenance", "Maintenance Required", "Breakdown", "Discontinue")) 
+  maint_priority = st.select("Maintenance Priority :", ("Low", "Medium", "High", "Emergency"))
+  additional_note = st.text_are("Additional Note")
+
+  pass
+  
 
 col1, col2 = st.columns(2)
 
@@ -30,22 +47,7 @@ if (submit):
   # st.success("You have successfully the information")
   inspection_summary()
 
-def do_inspection():
-  # screen field
-  
-  pass
 
-def inspection_summary():
-  # screen fields
-
-  # Overall Condition : DD List (Excellant Condition, Good Condition, A little wear, 
-  safe_to_use = st.radio("Vessel Safe to Use", ["Yes", "No"]) 
-  maint_reqd = st.radio("Maintenance Required:", ["Yes", "No"])
-  vsl_status = st.select("Vessel Status :",  ("Availanble", "In Maintenance", "Maintenance Required", "Breakdown", "Discontinue")) 
-  maint_priority = st.select("Maintenance Priority :", ("Low", "Medium", "High", "Emergency"))
-  additional_note = st.text_are("Additional Note")
-
-  pass
   
 # 1. Inspection Info
 # 2. Do Inspection
