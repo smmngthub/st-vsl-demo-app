@@ -39,7 +39,7 @@ def inspection_summary():
   # screen fields
 
   # Overall Condition : DD List (Excellant Condition, Good Condition, A little wear, 
-  safe_to_use = st.checkbox("Vessel Safe to Use", value=("Yes", "No") 
+  safe_to_use = st.radio("Vessel Safe to Use", ["Yes", "No"]) 
   # Maintenance Required: YesNo
   # Vessel Status : DD List (Availanble, In Maintenance, Maintenance Required, Breakdown, Discontinue) 
   #Maintenance Priority : DD List  (Low, Medium, High, Emergency)
