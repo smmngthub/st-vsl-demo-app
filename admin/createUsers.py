@@ -28,7 +28,7 @@ if user_action == "New User":
     # st.write("Picture Type: ", pic_type)
     if pic_type == "Upload":
       uploaded_photo = st.file_uploader("Upload a Photo", type=["png", "jpeg", "jpg"])
-      if uploaded_photo is not None
+      if uploaded_photo is not None:
         st.image(uploaded_photo)
       #pass
     elif pic_type == "Camera":
