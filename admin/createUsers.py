@@ -4,8 +4,8 @@ import streamlit as st
 st.title(":green[User Creation]")
 def toggle_and_text()
   cols = st.columns(2)
-  cols[0].toggle("Toggle") 
-  cols[1].text_area("Enter Text")
+  #cols[0].toggle("Toggle") 
+  #cols[1].text_area("Enter Text")
   
 toggle_and_text()
 
