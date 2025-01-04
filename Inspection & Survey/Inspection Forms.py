@@ -12,11 +12,11 @@ st.markdown(title_format, unsafe_allow_html=True)
 # st.subheader("This is a subheader with a divider", divider="gray")
 # st.subheader("These subheaders have rotating dividers", divider=True)
 
-st.subheader("_Add Inspection Item_ :blue[cool] :sunglasses:", divider=True)
+st.subheader("                     _Add Inspection Item_ :blue[cool] :sunglasses:", divider=True)
 
 def collect_form_details():
   # st.write("Add Inspection Item")
-  st.write("---")
+  # st.write("---")
   inspect_item = st.text_input("Inspection Item")
   rad_type = st.radio("Type", ["Good-Repair-Replace-NA", "Yes-No-NA", "Text Field", "Number", "Pass-Fail-NA", "Ok-Fault-NA"], horizontal=True)
   reqd = st.checkbox("Required")
