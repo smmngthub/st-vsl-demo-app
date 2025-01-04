@@ -14,10 +14,11 @@ with col1:
     select_inspection_form = st.text_input("Select Inspection Form")
 
 with col2:
-  vessel_number = st.text_input("Vessel Number")
-  vessel_name = st.text_input("Vessel Name")
-  registration_number = st.text_input("Registration Number")
-  nautical_reading = st.text_input("Nautical Reading")
+  with st.container(height=300):
+    vessel_number = st.text_input("Vessel Number")
+    vessel_name = st.text_input("Vessel Name")
+    registration_number = st.text_input("Registration Number")
+    nautical_reading = st.text_input("Nautical Reading")
 
 submit = st.button("Submit")
 if (submit):
