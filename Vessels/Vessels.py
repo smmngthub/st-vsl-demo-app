@@ -76,26 +76,31 @@ def add_new_vessel():
   col_left, col_right = st.columns([1, 1])
 
   with col_left:
-    Vessel_Number = st.text_input(":red[*Vessel Number]")
-    Vessel_Name = st.text_input(":red[*Vessel Name]")
-    Vessel_Category = st.text_input(":red[*Vessel Category]")
-    Registration_Number = st.text_input(":red[*Registration Number]")
-    Model = st.text_input("Model")
-    Nautical_Reading = st.text_input("Nautical Reading")
-    Nautical_Miles = st.text_input("Nautical Miles")
-    Status = st.selectbox("*Status", ("Available", "In Maintenance", "Maintenance Required")) # DD 
-    Flag = st.text_input("Flag") # DD  -Country
-    Port_of_Registry = st.text_input("Port of Registry")  
+    with st.container(height=300):
+      Vessel_Number = st.text_input(":red[*Vessel Number]")
+      Vessel_Name = st.text_input(":red[*Vessel Name]")
+      Vessel_Category = st.text_input(":red[*Vessel Category]")
+      Registration_Number = st.text_input(":red[*Registration Number]")
+      Model = st.text_input("Model")
+      Nautical_Reading = st.text_input("Nautical Reading")
+      Nautical_Miles = st.text_input("Nautical Miles")
 
-    SiteProject  = st.text_input("Site/Project")
-    Business_Unit  = st.text_input("Business Unit")
-    Vessel_Value  = st.text_input("Vessel Value")
-    
-    Purchase_Date  = st.date_input("Purchase Date")
-    Warranty_Date  = st.date_input("Warranty Date")
-    Required_Geo_Location_while_Inspection  = st.checkbox("Geo Location")
+    with st.container(height=100):
+      Status = st.selectbox("*Status", ("Available", "In Maintenance", "Maintenance Required")) # DD 
+      Flag = st.text_input("Flag") # DD  -Country
+      Port_of_Registry = st.text_input("Port of Registry")  
 
-    Assign_Inspection_Form  = st.text_input("Assign Inspection Form")
+    with st.container(height=100):
+      SiteProject  = st.text_input("Site/Project")
+      Business_Unit  = st.text_input("Business Unit")
+      Vessel_Value  = st.text_input("Vessel Value")
+
+    with st.container(height=150):
+      Purchase_Date  = st.date_input("Purchase Date")
+      Warranty_Date  = st.date_input("Warranty Date")
+      Required_Geo_Location_while_Inspection  = st.checkbox("Geo Location")
+  
+      Assign_Inspection_Form  = st.text_input("Assign Inspection Form")
 
     # pass
   with col_right:
