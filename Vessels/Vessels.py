@@ -85,7 +85,7 @@ def add_new_vessel():
       Nautical_Reading = st.text_input("Nautical Reading")
       Nautical_Miles = st.text_input("Nautical Miles")
 
-    with st.container(height=200):
+    with st.container(height=300):
       Status = st.selectbox("*Status", ("Available", "In Maintenance", "Maintenance Required")) # DD 
       Flag = st.text_input("Flag") # DD  -Country
       Port_of_Registry = st.text_input("Port of Registry")  
@@ -95,7 +95,7 @@ def add_new_vessel():
       Business_Unit  = st.text_input("Business Unit")
       Vessel_Value  = st.text_input("Vessel Value")
 
-    with st.container(height=450):
+    with st.container(height=400):
       Purchase_Date  = st.date_input("Purchase Date")
       Warranty_Date  = st.date_input("Warranty Date")
       Required_Geo_Location_while_Inspection  = st.checkbox("Geo Location")
