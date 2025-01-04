@@ -7,6 +7,65 @@ st.title(":green[Add Vessel]")
 
 # New Vessels & List of Existing Vessels
 
+# DATABASE STARTS HERE
+
+def add_vessel_data(a, b, c, d, e, f, g, h):
+  st.toast("CREAT ing TABLE...")
+  time.sleep(.5)
+  conn = sqlite3.connect('vesseldb.db')
+  cur = conn.cursor()
+  cur.execute("""CREATE TABLE IF NOT EXISTS vessel_table(VNAME TEXT(50), VAGE TEXT(50), VDOB TEXT(20));""")
+  st.toast("INSERT ing to TABLE...")
+  time.sleep(.5)
+
+  cur.execute("INSERT INTO vessel_table VALUES (?, ?, ?, ?, ?, ?, ?, ?)", (a, b, c, d, e, f, g, h))
+  # st.info("Inside add_test_data - Before COMMIT")
+  st.toast("Performing COMMIT...", icon='😍')
+  time.sleep(.5)
+
+  conn.commit()
+  conn.close() # Not Closing it here are we need the connection later to retrieve the data
+  st.success("You have successfully submitted the details. Thank you!")
+  st.balloons()  
+# Calling the form 
+def fetch_vessel_data():
+  st.toast("Fetching data...")
+  time.sleep(.5)
+  try:
+    conn = sqlite3.connect('vesseldb.db')
+    cur = conn.cursor()
+    cur.execute("SELECT * from vessel_table")
+    all_info = cur.fetchall()
+    conn.commit()
+    conn.close()
+    st.toast("Fetching ALL data!", icon='🎉') 
+    return all_info
+  except Exception as e:
+    st.error(f" There is a major problem with the retrival of data ::>>{e}")
+  # return None
+  # st.info("Inside fetcg_tst_data - Before CLOSE")
+
+def delete_vessel_data():
+  try:
+    st.toast("Inside DELETE ALL")
+    time.sleep(1)
+    conn = sqlite3.connect('vesseldb.db')
+    cur = conn.cursor()
+    cur.execute("DELETE from vessel_table")
+    st.toast("After DELETE ALL")
+    time.sleep(1)
+    
+    # all_info = cur.fetchall()
+    conn.commit()
+    conn.close()
+    st.toast("DELET ing ALL data!", icon='🎉') 
+    # pass
+  except Exception as e:
+    st.error(f" There is a major problem with the deletion of data ::>>{e}")
+  # pass
+
+
+#  ENDS HERE
 
 def add_new_vessel():
 
