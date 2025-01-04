@@ -33,7 +33,7 @@ def inspection_summary():
     additional_note = st.text_area("Additional Note")
   
 def inspection_info():
-  
+  st.write("Inspection Information")
   col1, col2 = st.columns(2)
   
   with col1:
@@ -51,11 +51,12 @@ def inspection_info():
       registration_number = st.text_input("Registration Number")
       nautical_reading = st.text_input("Nautical Reading")
   
-  next = st.button("Next")
-  if (next):
+  stg1 = st.button("Next")
+  if (stg1):
+
     
     inspection_summary()
-  
+    
     submit = st.button("Submit")
     if submit:
       st.success("You have successfully the information")
