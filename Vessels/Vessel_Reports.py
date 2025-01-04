@@ -2,3 +2,5 @@
 import streamlit as st
 
 st.title(" :blue[You are in Vessels Report Page]")
+
+from fpdf import FPDF
